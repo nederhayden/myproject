@@ -26,10 +26,14 @@ export function Card() {
           <div className="personal-details">
             <strong>{profile.name}</strong>
             <span>{profile.age}</span>
-            <span>{profile.city}</span>
-            <span>{profile.state}</span>
+            <span>
+              {`${profile.city} - 
+              ${profile.state}`}
+            </span>
+            <span></span>
             <span>{profile.occupation}</span>
           </div>
+          <button className="show-more">Saiba mais</button>
         </div>
       ))}
     </>

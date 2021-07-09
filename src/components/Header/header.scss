@@ -1,4 +1,5 @@
 $background: #26262e;
+$background-header: #262626;
 $blue: #4dcfe1;
 $white: #fff;
 
@@ -10,11 +11,23 @@ $white: #fff;
   border-radius: 8px;
   padding: 10px 40px;
   align-items: center;
-  background: #262626;
+  background: $background-header;
   box-shadow: 0 0 1em $blue;
+  overflow: hidden;
 
-  img {
-    height: 60px;
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 60px;
+    }
+
+    strong {
+      margin-left: 20px;
+      font-size: 34px;
+    }
   }
 
   .redes-sociais {
