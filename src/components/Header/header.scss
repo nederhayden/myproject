@@ -1,0 +1,37 @@
+$background: #26262e;
+$blue: #4dcfe1;
+$white: #fff;
+
+.header {
+  display: flex;
+  margin: 40px;
+  justify-content: space-between;
+  border: 1px solid $blue;
+  border-radius: 8px;
+  padding: 10px 40px;
+  align-items: center;
+  background: #262626;
+  box-shadow: 0 0 1em $blue;
+
+  img {
+    height: 60px;
+  }
+
+  .redes-sociais {
+    display: flex;
+    padding: 20px;
+
+    a {
+      text-decoration: none;
+      color: $white;
+      margin-left: 20px;
+      font-size: 24px;
+      font-weight: bold;
+
+      &:hover {
+        text-shadow: 1px 1px 0 lighten($blue, 15%);
+        color: $blue;
+      }
+    }
+  }
+}
