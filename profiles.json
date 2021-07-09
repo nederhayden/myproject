@@ -1,0 +1,28 @@
+{
+  "profiles": [
+    {
+      "name": "Neder Hayden",
+      "age": 29,
+      "city": "Manaus",
+      "state": "AM",
+      "occupation": "Desenvolvedor Front-End",
+      "avatar": "https://avatars.githubusercontent.com/u/33813497?s=400&u=cc801eec8c0f981dc7f9543c40a9f3ea7f22bd29&v=4"
+    },
+    {
+      "name": "Marcos Murillo",
+      "age": null,
+      "city": "Campinas",
+      "state": "SP",
+      "occupation": "Senior Software Engineer",
+      "avatar": "https://avatars.githubusercontent.com/u/48732349?v=4"
+    },
+    {
+      "name": "Michael Sivor",
+      "age": null,
+      "city": "Petrópolis",
+      "state": "RJ",
+      "occupation": "Desenvolvedor da Web",
+      "avatar": "https://media-exp1.licdn.com/dms/image/C4E35AQEHDIqM4G1a0w/profile-framedphoto-shrink_200_200/0/1620496490591?e=1625950800&v=beta&t=vfTiftBVYWPY9BBg01mF2tKSvkRiKA-VNvvaPJ2mmrY"
+    }
+  ]
+}
