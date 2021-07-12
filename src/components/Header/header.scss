@@ -3,10 +3,6 @@ $background-header: #262626;
 $blue: #4dcfe1;
 $white: #fff;
 
-// @media (min-width: 780px) {
-
-// }
-
 .header {
   display: flex;
   margin: 20px;
@@ -18,7 +14,6 @@ $white: #fff;
   background: $background-header;
   box-shadow: 0 0 1em $blue;
   overflow: hidden;
-  min-width: 790px;
 
   .logo {
     display: flex;
@@ -31,11 +26,11 @@ $white: #fff;
 
     strong {
       margin-left: 20px;
-      font-size: 34px;
+      font-size: 2.2rem;
     }
   }
 
-  .redes-sociais {
+  .types-dev {
     display: flex;
     padding: 20px;
 
@@ -43,13 +38,123 @@ $white: #fff;
       text-decoration: none;
       color: $white;
       margin-left: 20px;
-      font-size: 24px;
+      font-size: 1.4rem;
       font-weight: bold;
 
       &:hover {
         text-shadow: 1px 1px 0 lighten($blue, 15%);
         color: $blue;
       }
+    }
+  }
+}
+
+/* Esconde a class types-dev */
+@media (max-width: 830px) {
+  .header .types-dev {
+    display: none;
+  }
+
+  .one,
+  .two,
+  .three {
+    background-color: $white;
+    height: 5px;
+    width: 100%;
+    margin: 6px auto;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 30px;
+  }
+
+  /* Menu Aberto */
+  .menu-section.on {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $background;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Faz aparecer novamente a classe types-dev */
+  .menu-section.on .types-dev {
+    display: block;
+  }
+
+  /* Move o menu para o canto direito */
+  .menu-section.on .menu-toggle {
+    position: absolute;
+    right: 60px;
+    top: 45px;
+  }
+
+  /* Transforma o menu-toggle em um "X" */
+  .menu-section.on .menu-toggle .one {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  .menu-section.on .menu-toggle .two {
+    opacity: 0;
+  }
+
+  .menu-section.on .menu-toggle .three {
+    transform: rotate(-45deg) translate(8px, -9px);
+  }
+
+  .menu-section.on ul {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-section.on ul a {
+    transition-duration: 0.5s;
+    line-height: 8rem;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .header .logo {
+    img {
+      height: 40px;
+    }
+
+    strong {
+      font-size: 1.8rem;
+    }
+  }
+
+  .one,
+  .two,
+  .three {
+    background-color: $white;
+    height: 3px;
+    width: 100%;
+    margin: 3px auto;
+  }
+
+  .menu-toggle {
+    width: 20px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 380px) {
+  .header .logo {
+    img {
+      height: 25px;
+    }
+
+    strong {
+      font-size: 1.4rem;
     }
   }
 }

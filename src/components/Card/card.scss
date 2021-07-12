@@ -30,7 +30,7 @@ $shadow: 0 0 1em $blue;
 
 .profiles {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: 20px;
 
   .card {
@@ -61,12 +61,12 @@ $shadow: 0 0 1em $blue;
 
       strong {
         padding-bottom: 2px;
-        font-size: 24px;
+        font-size: 1.4rem;
       }
 
       span {
         padding-bottom: 2px;
-        font-size: 20px;
+        font-size: 1.2rem;
       }
     }
 
@@ -79,7 +79,7 @@ $shadow: 0 0 1em $blue;
       border: none;
       border-radius: 4px;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 1.2rem;
       color: $background-card;
 
       &:hover {
@@ -88,5 +88,19 @@ $shadow: 0 0 1em $blue;
         border: 2px solid $blue;
       }
     }
+  }
+}
+
+/* Organiza os cards conforme diminui a tela */
+@media (max-width: 1400px) {
+  .profiles {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+/* Remove o container do filtro */
+@media (max-width: 830px) {
+  .wrapper-2 {
+    display: none;
   }
 }
