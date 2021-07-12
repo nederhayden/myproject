@@ -1,0 +1,83 @@
+$background: #26262e;
+$background-card: #262626;
+$blue: #4dcfe1;
+$white: #fff;
+$shadow: 0 0 1em $blue;
+
+.filter {
+  border: 1px solid $blue;
+  border-radius: 4px;
+  box-shadow: $shadow;
+  width: 20%;
+  padding: 20px;
+}
+
+details {
+  summary {
+    list-style: none;
+  }
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+}
+
+.genero,
+.competencia,
+.nivel {
+  font-size: 1.4rem;
+  border: solid 1px $background-card;
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  transition: green 0.25s;
+  will-change: green;
+
+  &:first-child {
+    margin-top: 24px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &:hover {
+    background: $background-card;
+  }
+
+  &[open] {
+    .title:after {
+      content: "-";
+    }
+  }
+}
+
+.title {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 16px;
+  position: relative;
+
+  &:after {
+    content: "+";
+    position: absolute;
+    right: 16px;
+    transform: translatey(-50%);
+    top: 50%;
+  }
+}
+
+.options {
+  border-top: $blue solid 1px;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 16px;
+  font-size: 1.2rem;
+
+  span {
+    margin-left: 10px;
+  }
+}

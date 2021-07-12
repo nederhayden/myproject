@@ -131,24 +131,11 @@ $white: #fff;
       font-size: 1.8rem;
     }
   }
-
-  .one,
-  .two,
-  .three {
-    background-color: $white;
-    height: 3px;
-    width: 100%;
-    margin: 3px auto;
-  }
-
-  .menu-toggle {
-    width: 20px;
-    height: 15px;
-  }
 }
 
 @media (max-width: 380px) {
   .header .logo {
+    display: block;
     img {
       height: 25px;
     }

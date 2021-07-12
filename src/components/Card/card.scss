@@ -6,14 +6,27 @@ $shadow: 0 0 1em $blue;
 
 .wrapper-1 {
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  flex-direction: row;
+  margin: 0 20px;
+  // background: red;
+  justify-content: flex-start;
 }
 
 .wrapper-2 {
+  // background: green;
+  // flex: 2;
+  margin-left: 120px;
+}
+
+.wrapper-3 {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
-  margin: 20px;
+  margin-bottom: 20px;
+
+  strong {
+    margin-right: 10px;
+  }
 
   select {
     min-width: 40px;
@@ -24,14 +37,15 @@ $shadow: 0 0 1em $blue;
     border-radius: 4px;
     box-shadow: $shadow;
     transition: background 0.2s;
-    height: 40px;
+    height: 32px;
   }
 }
 
 .profiles {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 240px);
   grid-gap: 20px;
+  justify-content: center;
 
   .card {
     display: flex;
@@ -43,7 +57,6 @@ $shadow: 0 0 1em $blue;
     box-shadow: $shadow;
     height: 380px;
     width: 240px;
-    margin: 0 auto;
 
     img {
       height: 180px;
@@ -92,15 +105,19 @@ $shadow: 0 0 1em $blue;
 }
 
 /* Organiza os cards conforme diminui a tela */
-@media (max-width: 1400px) {
+@media (max-width: 1300px) {
   .profiles {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .card {
+    margin: 0 auto;
   }
 }
 
 /* Remove o container do filtro */
 @media (max-width: 830px) {
-  .wrapper-2 {
+  .wrapper-3 {
     display: none;
   }
 }
