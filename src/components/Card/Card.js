@@ -4,38 +4,56 @@ import "./card.scss";
 
 export function Card() {
   const [profiles, setProfiles] = useState([]);
+  const [sortType, setSortType] = useState("name");
 
   useEffect(() => {
-    async function loadProfiles() {
+    async function loadProfiles(type) {
       const response = await api.get("profiles");
-      const data = response.data.map((profile) => ({
-        ...profile,
-      }));
+      const types = {
+        name: "name",
+        price: "age",
+      };
+      const sortProperty = types[type];
+
+      const data = response.data
+        .sort((a, b) => (a[sortProperty] < b[sortProperty] ? -1 : 1))
+        .map((profile) => ({
+          ...profile,
+        }));
 
       setProfiles(data);
     }
 
-    loadProfiles();
-  }, []);
+    loadProfiles(sortType);
+  }, [sortType]);
 
   return (
-    <>
-      {profiles.map((profile) => (
-        <div className="card">
-          <img src={profile.avatar} alt={`Avatar de ${profile.name}`} />
-          <div className="personal-details">
-            <strong>{profile.name}</strong>
-            <span>{profile.age}</span>
-            <span>
-              {`${profile.city} - 
+    <div className="wrapper-1">
+      <div className="wrapper-2">
+        <select onChange={(e) => setSortType(e.target.value)}>
+          <option value="name">A-Z</option>
+          <option value="age">Age</option>
+        </select>
+      </div>
+
+      <div className="profiles">
+        {profiles.map((profile) => (
+          <div className="card">
+            <img src={profile.avatar} alt={`Avatar de ${profile.name}`} />
+            <div className="personal-details">
+              <strong>{profile.name}</strong>
+              <span>{profile.age}</span>
+              <span>
+                {`${profile.city} - 
               ${profile.state}`}
-            </span>
-            <span></span>
-            <span>{profile.occupation}</span>
+              </span>
+              <span></span>
+              <span>{profile.occupation}</span>
+            </div>
+            <button className="show-more">Show More</button>
           </div>
-          <button className="show-more">Saiba mais</button>
-        </div>
-      ))}
-    </>
+        ))}
+      </div>
+    </div>
   );
 }
