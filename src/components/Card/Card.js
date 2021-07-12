@@ -11,7 +11,7 @@ export function Card() {
       const response = await api.get("profiles");
       const types = {
         name: "name",
-        price: "age",
+        age: "age",
       };
       const sortProperty = types[type];
 
