@@ -5,17 +5,6 @@ import logo from "../../assets/logo.png";
 import "./header.scss";
 
 export default function Header() {
-  /* let show = true;
-
-  const menuSection = document.querySelector(".menu-section");
-  const menuToggle = document.querySelector(".menu-toggle");
-
-  menuToggle.addEventListener("click", () => {
-    document.body.style.overflow = show ? "hidden" : "initial";
-    menuSection.classList.toggle("on", show);
-    show = !show;
-  }); */
-
   return (
     <div className="header">
       <div className="logo">
@@ -28,11 +17,10 @@ export default function Header() {
           <div className="two"></div>
           <div className="three"></div>
         </div>
-        <div className="types-dev">
+        <div className="login">
           <ul>
-            <Link to="sem link ainda">Front-End</Link>
-            <Link to="sem link ainda">Back-End</Link>
-            <Link to="sem link ainda">Fullstack</Link>
+            <Link to="sem link ainda">Entrar</Link>
+            <Link to="sem link ainda">Cadastra-se</Link>
           </ul>
         </div>
       </div>

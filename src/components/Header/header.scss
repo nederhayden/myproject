@@ -30,7 +30,7 @@ $white: #fff;
     }
   }
 
-  .types-dev {
+  .login {
     display: flex;
     padding: 20px;
 
@@ -49,9 +49,9 @@ $white: #fff;
   }
 }
 
-/* Esconde a class types-dev */
+/* Esconde a class login */
 @media (max-width: 830px) {
-  .header .types-dev {
+  .header .login {
     display: none;
   }
 
@@ -83,8 +83,8 @@ $white: #fff;
     align-items: center;
   }
 
-  /* Faz aparecer novamente a classe types-dev */
-  .menu-section.on .types-dev {
+  /* Faz aparecer novamente a classe login */
+  .menu-section.on .login {
     display: block;
   }
 
