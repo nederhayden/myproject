@@ -8,7 +8,9 @@ export default function Header() {
   return (
     <div className="header">
       <div className="logo">
-        <img src={logo} alt="Logo" />
+        <Link to="/">
+          <img src={logo} alt="Logo" />
+        </Link>
         <strong>Developers</strong>
       </div>
       <div className="menu-section">

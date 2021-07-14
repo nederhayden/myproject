@@ -1,30 +1,32 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../../contexts/Contexts";
+import { Checkbox } from "../Checkbox/Checkbox";
 
 export function Genero() {
+  const { checked, handleChangeCheckbox } = useContext(GlobalContext);
+
   return (
     <details className="genero">
       <summary className="title">Gênero</summary>
       <div className="options">
         <label>
-          <input
-            type="checkbox"
+          <Checkbox
             name="masculino"
-            id="masculino"
-            checked={null}
-            onChange={null}
+            value="masculino"
+            text="Masculino"
+            checked={checked.id}
+            onChange={handleChangeCheckbox}
           />
-          <span>Masculino</span>
         </label>
 
         <label>
-          <input
-            type="checkbox"
-            name="feminino"
-            id="feminino"
-            checked={null}
-            onChange={null}
+          <Checkbox
+            name="masculino"
+            value="masculino"
+            text="Feminino"
+            checked={checked.id}
+            onChange={handleChangeCheckbox}
           />
-          <span>Feminino</span>
         </label>
       </div>
     </details>
@@ -32,41 +34,40 @@ export function Genero() {
 }
 
 export function Competencia() {
+  const { checked, handleChangeCheckbox } = useContext(GlobalContext);
+
   return (
     <details className="competencia">
       <summary className="title">Competência</summary>
       <div className="options">
         <label>
-          <input
-            type="checkbox"
-            name="front-End"
-            id="front-End"
-            checked={null}
-            onChange={null}
+          <Checkbox
+            name="masculino"
+            value="masculino"
+            text="Front-End"
+            checked={checked.id}
+            onChange={handleChangeCheckbox}
           />
-          <span>Front-End</span>
         </label>
 
         <label>
-          <input
-            type="checkbox"
-            name="back-end"
-            id="back-end"
-            checked={null}
-            onChange={null}
+          <Checkbox
+            name="masculino"
+            value="masculino"
+            text="Back-End"
+            checked={checked.id}
+            onChange={handleChangeCheckbox}
           />
-          <span>Back-End</span>
         </label>
 
         <label>
-          <input
-            type="checkbox"
-            name="fullstack"
-            id="fullstack"
-            checked={null}
-            onChange={null}
+          <Checkbox
+            name="masculino"
+            value="masculino"
+            text="Fullstack"
+            checked={checked.id}
+            onChange={handleChangeCheckbox}
           />
-          <span>Fullstack</span>
         </label>
       </div>
     </details>
@@ -74,41 +75,40 @@ export function Competencia() {
 }
 
 export function Nivel() {
+  const { checked, handleChangeCheckbox } = useContext(GlobalContext);
+
   return (
     <details className="nivel">
       <summary className="title">Nível</summary>
       <div className="options">
         <label>
-          <input
-            type="checkbox"
-            name="junior"
-            id="junior"
-            checked={null}
-            onChange={null}
+          <Checkbox
+            name="masculino"
+            value="masculino"
+            text="Júnior"
+            checked={checked.id}
+            onChange={handleChangeCheckbox}
           />
-          <span>Júnior</span>
         </label>
 
         <label>
-          <input
-            type="checkbox"
-            name="senior"
-            id="senior"
-            checked={null}
-            onChange={null}
+          <Checkbox
+            name="masculino"
+            value="masculino"
+            text="Sênior"
+            checked={checked.id}
+            onChange={handleChangeCheckbox}
           />
-          <span>Sênior</span>
         </label>
 
         <label>
-          <input
-            type="checkbox"
-            name="Pleno"
-            id="Pleno"
-            checked={null}
-            onChange={null}
+          <Checkbox
+            name="masculino"
+            value="masculino"
+            text="Pleno"
+            checked={checked.id}
+            onChange={handleChangeCheckbox}
           />
-          <span>Pleno</span>
         </label>
       </div>
     </details>

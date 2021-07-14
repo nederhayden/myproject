@@ -1,32 +1,11 @@
-import React, { useEffect, useState } from "react";
-import api from "../../services/api";
+import React, { useContext } from "react";
+import { GlobalContext } from "../../contexts/Contexts";
 import { Filter } from "../Filter/Filter";
+
 import "./card.scss";
 
 export function Card() {
-  const [profiles, setProfiles] = useState([]);
-  const [sortType, setSortType] = useState("name");
-
-  useEffect(() => {
-    async function loadProfiles(type) {
-      const response = await api.get("profiles");
-      const types = {
-        name: "name",
-        age: "age",
-      };
-      const sortProperty = types[type];
-
-      const data = response.data
-        .sort((a, b) => (a[sortProperty] < b[sortProperty] ? -1 : 1))
-        .map((profile) => ({
-          ...profile,
-        }));
-
-      setProfiles(data);
-    }
-
-    loadProfiles(sortType);
-  }, [sortType]);
+  const { profiles, setSortType } = useContext(GlobalContext);
 
   return (
     <div className="wrapper-1">
@@ -37,14 +16,16 @@ export function Card() {
           <strong>Ordernar por</strong>
           <select onChange={(e) => setSortType(e.target.value)}>
             <option value="name">A-Z</option>
-            <option value="age">Age</option>
+            <option value="age">Idade</option>
           </select>
         </div>
 
         <div className="profiles">
           {profiles.map((profile) => (
-            <div className="card">
-              <img src={profile.avatar} alt={`Avatar de ${profile.name}`} />
+            <div key={profile.id} className="card">
+              <div className="wrapper-img">
+                <img src={profile.avatar} alt={`Avatar de ${profile.name}`} />
+              </div>
               <div className="personal-details">
                 <strong>{profile.name}</strong>
                 <span>{profile.age}</span>
