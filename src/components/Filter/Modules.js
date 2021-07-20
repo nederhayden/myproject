@@ -3,7 +3,7 @@ import { GlobalContext } from "../../contexts/Contexts";
 import { Checkbox } from "../Checkbox/Checkbox";
 
 export function Genero() {
-  const { checked, handleChangeCheckbox } = useContext(GlobalContext);
+  const { checked, changeCheck } = useContext(GlobalContext);
 
   return (
     <details className="genero">
@@ -15,17 +15,17 @@ export function Genero() {
             value="masculino"
             text="Masculino"
             checked={checked.id}
-            onChange={handleChangeCheckbox}
+            onChange={changeCheck}
           />
         </label>
 
         <label>
           <Checkbox
-            name="masculino"
-            value="masculino"
+            name="feminino"
+            value="feminino"
             text="Feminino"
             checked={checked.id}
-            onChange={handleChangeCheckbox}
+            onChange={changeCheck}
           />
         </label>
       </div>
@@ -34,7 +34,7 @@ export function Genero() {
 }
 
 export function Competencia() {
-  const { checked, handleChangeCheckbox } = useContext(GlobalContext);
+  const { checked, changeCheck } = useContext(GlobalContext);
 
   return (
     <details className="competencia">
@@ -46,7 +46,7 @@ export function Competencia() {
             value="masculino"
             text="Front-End"
             checked={checked.id}
-            onChange={handleChangeCheckbox}
+            onChange={changeCheck}
           />
         </label>
 
@@ -56,7 +56,7 @@ export function Competencia() {
             value="masculino"
             text="Back-End"
             checked={checked.id}
-            onChange={handleChangeCheckbox}
+            onChange={changeCheck}
           />
         </label>
 
@@ -66,7 +66,7 @@ export function Competencia() {
             value="masculino"
             text="Fullstack"
             checked={checked.id}
-            onChange={handleChangeCheckbox}
+            onChange={changeCheck}
           />
         </label>
       </div>
@@ -75,7 +75,7 @@ export function Competencia() {
 }
 
 export function Nivel() {
-  const { checked, handleChangeCheckbox } = useContext(GlobalContext);
+  const { checked, changeCheck } = useContext(GlobalContext);
 
   return (
     <details className="nivel">
@@ -87,7 +87,7 @@ export function Nivel() {
             value="masculino"
             text="Júnior"
             checked={checked.id}
-            onChange={handleChangeCheckbox}
+            onChange={changeCheck}
           />
         </label>
 
@@ -97,7 +97,7 @@ export function Nivel() {
             value="masculino"
             text="Sênior"
             checked={checked.id}
-            onChange={handleChangeCheckbox}
+            onChange={changeCheck}
           />
         </label>
 
@@ -107,7 +107,7 @@ export function Nivel() {
             value="masculino"
             text="Pleno"
             checked={checked.id}
-            onChange={handleChangeCheckbox}
+            onChange={changeCheck}
           />
         </label>
       </div>

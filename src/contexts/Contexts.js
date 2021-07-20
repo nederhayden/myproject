@@ -29,13 +29,15 @@ export default function ContextProvider({ children }) {
     loadProfiles(sortType);
   }, [sortType]);
 
-  function handleChangeCheckbox() {
-    setChecked(!checked);
+  function changeCheck(event) {
+    const check = event.target.checked;
+    console.log(check);
+    setChecked(check);
   }
 
   return (
     <GlobalContext.Provider
-      value={{ checked, handleChangeCheckbox, profiles, setSortType }}
+      value={{ checked, changeCheck, profiles, setSortType }}
     >
       {children}
     </GlobalContext.Provider>
