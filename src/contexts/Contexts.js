@@ -37,7 +37,7 @@ export default function ContextProvider({ children }) {
 
   return (
     <GlobalContext.Provider
-      value={{ checked, changeCheck, profiles, setSortType }}
+      value={{ checked, changeCheck, profiles, setProfiles, setSortType }}
     >
       {children}
     </GlobalContext.Provider>

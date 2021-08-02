@@ -5,7 +5,7 @@ import { Genero, Competencia, Nivel } from "./Modules";
 export function Filter() {
   return (
     <div className="filter">
-      <h1>Filtrar</h1>
+      <h1>Filtro</h1>
       <Genero />
       <Competencia />
       <Nivel />

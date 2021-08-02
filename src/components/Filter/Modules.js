@@ -3,7 +3,8 @@ import { GlobalContext } from "../../contexts/Contexts";
 import { Checkbox } from "../Checkbox/Checkbox";
 
 export function Genero() {
-  const { checked, changeCheck } = useContext(GlobalContext);
+  const { checked, profiles, setProfiles, changeCheck } =
+    useContext(GlobalContext);
 
   return (
     <details className="genero">
@@ -11,21 +12,35 @@ export function Genero() {
       <div className="options">
         <label>
           <Checkbox
-            name="masculino"
-            value="masculino"
+            value="Masculino"
             text="Masculino"
             checked={checked.id}
             onChange={changeCheck}
+            onClick={() => {
+              if (!checked) {
+                const profileFiltered = profiles.filter(
+                  (profile) => profile.gender === "Masculino"
+                );
+                setProfiles(profileFiltered);
+              }
+            }}
           />
         </label>
 
         <label>
           <Checkbox
-            name="feminino"
-            value="feminino"
+            value="Feminino"
             text="Feminino"
             checked={checked.id}
             onChange={changeCheck}
+            onClick={() => {
+              if (!checked) {
+                const profileFiltered = profiles.filter(
+                  (profile) => profile.gender === "Feminino"
+                );
+                setProfiles(profileFiltered);
+              }
+            }}
           />
         </label>
       </div>
@@ -34,7 +49,8 @@ export function Genero() {
 }
 
 export function Competencia() {
-  const { checked, changeCheck } = useContext(GlobalContext);
+  const { checked, profiles, changeCheck, setProfiles } =
+    useContext(GlobalContext);
 
   return (
     <details className="competencia">
@@ -42,31 +58,52 @@ export function Competencia() {
       <div className="options">
         <label>
           <Checkbox
-            name="masculino"
-            value="masculino"
+            value="Front-End"
             text="Front-End"
             checked={checked.id}
             onChange={changeCheck}
+            onClick={() => {
+              if (!checked) {
+                const profileFiltered = profiles.filter(
+                  (profile) => profile.occupation === "Front-End"
+                );
+                setProfiles(profileFiltered);
+              }
+            }}
           />
         </label>
 
         <label>
           <Checkbox
-            name="masculino"
-            value="masculino"
+            value="Back-End"
             text="Back-End"
             checked={checked.id}
             onChange={changeCheck}
+            onClick={() => {
+              if (!checked) {
+                const profileFiltered = profiles.filter(
+                  (profile) => profile.occupation === "Back-End"
+                );
+                setProfiles(profileFiltered);
+              }
+            }}
           />
         </label>
 
         <label>
           <Checkbox
-            name="masculino"
-            value="masculino"
+            value="Fullstack"
             text="Fullstack"
             checked={checked.id}
             onChange={changeCheck}
+            onClick={() => {
+              if (!checked) {
+                const profileFiltered = profiles.filter(
+                  (profile) => profile.occupation === "Fullstack"
+                );
+                setProfiles(profileFiltered);
+              }
+            }}
           />
         </label>
       </div>
@@ -75,7 +112,8 @@ export function Competencia() {
 }
 
 export function Nivel() {
-  const { checked, changeCheck } = useContext(GlobalContext);
+  const { checked, profiles, changeCheck, setProfiles } =
+    useContext(GlobalContext);
 
   return (
     <details className="nivel">
@@ -83,31 +121,52 @@ export function Nivel() {
       <div className="options">
         <label>
           <Checkbox
-            name="masculino"
-            value="masculino"
+            value="Júnior"
             text="Júnior"
             checked={checked.id}
             onChange={changeCheck}
+            onClick={() => {
+              if (!checked) {
+                const profileFiltered = profiles.filter(
+                  (profile) => profile.level === "Júnior"
+                );
+                setProfiles(profileFiltered);
+              }
+            }}
           />
         </label>
 
         <label>
           <Checkbox
-            name="masculino"
-            value="masculino"
-            text="Sênior"
-            checked={checked.id}
-            onChange={changeCheck}
-          />
-        </label>
-
-        <label>
-          <Checkbox
-            name="masculino"
-            value="masculino"
+            value="Pleno"
             text="Pleno"
             checked={checked.id}
             onChange={changeCheck}
+            onClick={() => {
+              if (!checked) {
+                const profileFiltered = profiles.filter(
+                  (profile) => profile.level === "Pleno"
+                );
+                setProfiles(profileFiltered);
+              }
+            }}
+          />
+        </label>
+
+        <label>
+          <Checkbox
+            value="Sênior"
+            text="Sênior"
+            checked={checked.id}
+            onChange={changeCheck}
+            onClick={() => {
+              if (!checked) {
+                const profileFiltered = profiles.filter(
+                  (profile) => profile.level === "Sênior"
+                );
+                setProfiles(profileFiltered);
+              }
+            }}
           />
         </label>
       </div>

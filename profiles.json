@@ -7,7 +7,8 @@
       "gender": "Masculino",
       "city": "Manaus",
       "state": "AM",
-      "occupation": "Developer Front-End",
+      "occupation": "Front-End",
+      "level": "Júnior",
       "avatar": "https://avatars.githubusercontent.com/u/33813497?s=400&u=cc801eec8c0f981dc7f9543c40a9f3ea7f22bd29&v=4"
     },
     {
@@ -17,7 +18,8 @@
       "gender": "Masculino",
       "city": "Campinas",
       "state": "SP",
-      "occupation": "Senior Software Engineer",
+      "occupation": "Front-End",
+      "level": "Sénior",
       "avatar": "https://avatars.githubusercontent.com/u/48732349?v=4"
     },
     {
@@ -27,8 +29,9 @@
       "gender": "Masculino",
       "city": "Petrópolis",
       "state": "RJ",
-      "occupation": "Developer Web",
-      "avatar": "https://media-exp1.licdn.com/dms/image/C4E35AQEHDIqM4G1a0w/profile-framedphoto-shrink_200_200/0/1620496490591?e=1625950800&v=beta&t=vfTiftBVYWPY9BBg01mF2tKSvkRiKA-VNvvaPJ2mmrY"
+      "occupation": "Back-End",
+      "level": "Sénior",
+      "avatar": "https://media-exp1.licdn.com/dms/image/C4E35AQEHDIqM4G1a0w/profile-framedphoto-shrink_800_800/0/1620496490591?e=1628013600&v=beta&t=qecNWosj3We560_65YunCFdD8yum47T4oQTzOUxGWYY"
     },
     {
       "id": 4,
@@ -37,7 +40,8 @@
       "gender": "Masculino",
       "city": "São Francisco",
       "state": "Califórnia",
-      "occupation": "Developer",
+      "occupation": "Fullstack",
+      "level": "Sénior",
       "avatar": "https://imagens.canaltech.com.br/celebridades/2.400.jpg"
     },
     {
@@ -47,7 +51,8 @@
       "gender": "Masculino",
       "city": "Seattle",
       "state": "Whashington",
-      "occupation": "Developer",
+      "occupation": "Fullstack",
+      "level": "Sénior",
       "avatar": "https://exame.com/wp-content/uploads/2021/02/bill.jpg"
     },
     {
@@ -57,7 +62,8 @@
       "gender": "Masculino",
       "city": "Arhus",
       "state": "Dinamarca",
-      "occupation": "Developer",
+      "occupation": "Fullstack",
+      "level": "Sénior",
       "avatar": "https://images.ctfassets.net/oxjq45e8ilak/1ARAax8Vuc5pynRBj2JGql/864f87e6dda61cb06c03e62e3fde5282/Dr_Stroustrup_10941___________.png?w=300"
     },
     {
@@ -67,7 +73,8 @@
       "gender": "Masculino",
       "city": "White Plains",
       "state": "New York",
-      "occupation": "Developer",
+      "occupation": "Fullstack",
+      "level": "Sénior",
       "avatar": "https://glennbouchard.com/images/it-update/5-programmer-terbaik-di-dunia_682.jpg"
     },
     {
@@ -77,7 +84,8 @@
       "gender": "Masculino",
       "city": "Helsínquia",
       "state": "Finlândia",
-      "occupation": "Developer",
+      "occupation": "Fullstack",
+      "level": "Sénior",
       "avatar": "https://programadoresbrasil.com.br/wp-content/uploads/2020/07/torvalds_in_nature.jpg"
     },
     {
@@ -87,67 +95,63 @@
       "gender": "Masculino",
       "city": "Bronxville",
       "state": "New Jersey",
-      "occupation": "Developer",
+      "occupation": "Fullstack",
+      "level": "Sénior",
       "avatar": "https://s2.glbimg.com/wiu7paEVlqjC2kImFMqXmn9QEnY=/1152x1600/s.glbimg.com/po/tt/f/original/2011/10/14/dennis_ritchie.jpg"
     },
     {
       "id": 10,
-      "name": "Tiririca",
-      "age": 56,
-      "gender": "Masculino",
-      "city": "Itapipoca",
-      "state": "Ceará",
-      "occupation": "Humorista",
-      "avatar": "https://media.gazetadopovo.com.br/2010/10/0bd442888caaccd8d248afc72932634c-gpLarge.jpg"
-    },
-    {
-      "id": 11,
       "name": "Amanda",
       "age": 22,
-      "gender": "Feminina",
+      "gender": "Feminino",
       "city": "n/d",
       "state": "n/d",
       "occupation": "Back-End",
+      "level": "Pleno",
       "avatar": "https://thumbs.dreamstime.com/b/retrato-do-lado-perfil-dela-ela-est%C3%A1-adorando-lindas-e-bonitas-mulheres-muito-contente-alegre-bonitinhas-alegres-garota-dobrada-188400833.jpg"
     },
     {
-      "id": 12,
+      "id": 11,
       "name": "Bruna",
       "age": 30,
-      "gender": "Feminina",
+      "gender": "Feminino",
       "city": "n/d",
       "state": "n/d",
       "occupation": "Fullstack",
+      "level": "Sénior",
       "avatar": "https://image.freepik.com/fotos-gratis/linda-mulher-afro-americana-esta-de-perfil-vestida-casualmente-tem-um-sorriso-largo-e-brilhante-feliz-por-ser-fotografada-isolada-sobre-uma-parede-branca-conceito-de-emocoes-e-sentimentos-positivos_273609-16456.jpg"
     },
     {
-      "id": 13,
+      "id": 12,
       "name": "Carla",
       "age": 29,
-      "gender": "Feminina",
+      "gender": "Feminino",
       "city": "n/d",
       "state": "n/d",
       "occupation": "Front-End",
+      "level": "Júnior",
       "avatar": "https://image.freepik.com/fotos-gratis/perfil-de-retrato-de-mulher-de-negocios-sorrindo-linda_100800-3189.jpg"
     },
     {
-      "id": 14,
+      "id": 13,
       "name": "Debora",
       "age": 21,
-      "gender": "Feminina",
+      "gender": "Feminino",
       "city": "n/d",
       "state": "n/d",
       "occupation": "Front-End",
+      "level": "Sénior",
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRBNsdRR3iapAMlBgLNQXEPLUU9kLqAHvvdx7hb1AcPXEVc4qbM7G0QauPQluak7cUM2I&usqp=CAU"
     },
     {
-      "id": 15,
+      "id": 14,
       "name": "Fernanda",
       "age": 27,
-      "gender": "Feminina",
+      "gender": "Feminino",
       "city": "n/d",
       "state": "n/d",
       "occupation": "Back-End",
+      "level": "Júnior",
       "avatar": "https://st2.depositphotos.com/1514397/5893/i/600/depositphotos_58939069-stock-photo-woman-with-ideal-skin.jpg"
     }
   ]
