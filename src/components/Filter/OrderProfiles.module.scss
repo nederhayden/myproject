@@ -1,0 +1,38 @@
+$background: #26262e;
+$background-card: #1b1b1b;
+$blue: #4dcfe1;
+$white: #fff;
+$black: #000;
+$shadow: 0 0 1em $blue;
+
+.wrapper_1 {
+  margin-left: 120px;
+}
+
+.wrapper_2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+
+  strong {
+    margin-right: 10px;
+  }
+
+  select {
+    min-width: 40px;
+    padding: 6px;
+    background: $background-card;
+    color: $blue;
+    border: 1px solid $blue;
+    border-radius: 4px;
+    transition: background 0.2s;
+    height: 32px;
+
+    &:hover {
+      border: 1px solid $blue;
+      box-shadow: $shadow;
+      background: $black;
+    }
+  }
+}

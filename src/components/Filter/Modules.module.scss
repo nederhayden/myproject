@@ -1,23 +1,8 @@
-$background: #26262e;
+// $background: #26262e;
 $background-filter: #1b1b1b;
 $blue: #4dcfe1;
-$white: #fff;
 $black: #000;
 $shadow: 0 0 1em $blue;
-
-.filter {
-  border: 1px solid $blue;
-  border-radius: 4px;
-  box-shadow: $shadow;
-  width: 20%;
-  height: 800px;
-  padding: 20px;
-  background: $background-filter;
-
-  h1 {
-    margin-bottom: 10px;
-  }
-}
 
 details {
   summary {

@@ -1,0 +1,17 @@
+$background: #26262e;
+$background-card: #1b1b1b;
+$blue: #4dcfe1;
+$white: #fff;
+$black: #000;
+$shadow: 0 0 1em $blue;
+
+.home {
+  display: flex;
+}
+
+.profiles {
+  display: grid;
+  grid-template-columns: repeat(5, 240px);
+  grid-gap: 20px;
+  justify-content: center;
+}

@@ -19,7 +19,7 @@
       "city": "Campinas",
       "state": "SP",
       "occupation": "Front-End",
-      "level": "Sénior",
+      "level": "Sênior",
       "avatar": "https://avatars.githubusercontent.com/u/48732349?v=4"
     },
     {
@@ -30,7 +30,7 @@
       "city": "Petrópolis",
       "state": "RJ",
       "occupation": "Back-End",
-      "level": "Sénior",
+      "level": "Sênior",
       "avatar": "https://media-exp1.licdn.com/dms/image/C4E35AQEHDIqM4G1a0w/profile-framedphoto-shrink_800_800/0/1620496490591?e=1628013600&v=beta&t=qecNWosj3We560_65YunCFdD8yum47T4oQTzOUxGWYY"
     },
     {
@@ -41,7 +41,7 @@
       "city": "São Francisco",
       "state": "Califórnia",
       "occupation": "Fullstack",
-      "level": "Sénior",
+      "level": "Sênior",
       "avatar": "https://imagens.canaltech.com.br/celebridades/2.400.jpg"
     },
     {
@@ -52,7 +52,7 @@
       "city": "Seattle",
       "state": "Whashington",
       "occupation": "Fullstack",
-      "level": "Sénior",
+      "level": "Sênior",
       "avatar": "https://exame.com/wp-content/uploads/2021/02/bill.jpg"
     },
     {
@@ -63,7 +63,7 @@
       "city": "Arhus",
       "state": "Dinamarca",
       "occupation": "Fullstack",
-      "level": "Sénior",
+      "level": "Sênior",
       "avatar": "https://images.ctfassets.net/oxjq45e8ilak/1ARAax8Vuc5pynRBj2JGql/864f87e6dda61cb06c03e62e3fde5282/Dr_Stroustrup_10941___________.png?w=300"
     },
     {
@@ -74,7 +74,7 @@
       "city": "White Plains",
       "state": "New York",
       "occupation": "Fullstack",
-      "level": "Sénior",
+      "level": "Sênior",
       "avatar": "https://glennbouchard.com/images/it-update/5-programmer-terbaik-di-dunia_682.jpg"
     },
     {
@@ -85,7 +85,7 @@
       "city": "Helsínquia",
       "state": "Finlândia",
       "occupation": "Fullstack",
-      "level": "Sénior",
+      "level": "Sênior",
       "avatar": "https://programadoresbrasil.com.br/wp-content/uploads/2020/07/torvalds_in_nature.jpg"
     },
     {
@@ -96,7 +96,7 @@
       "city": "Bronxville",
       "state": "New Jersey",
       "occupation": "Fullstack",
-      "level": "Sénior",
+      "level": "Sênior",
       "avatar": "https://s2.glbimg.com/wiu7paEVlqjC2kImFMqXmn9QEnY=/1152x1600/s.glbimg.com/po/tt/f/original/2011/10/14/dennis_ritchie.jpg"
     },
     {
@@ -118,7 +118,7 @@
       "city": "n/d",
       "state": "n/d",
       "occupation": "Fullstack",
-      "level": "Sénior",
+      "level": "Sênior",
       "avatar": "https://image.freepik.com/fotos-gratis/linda-mulher-afro-americana-esta-de-perfil-vestida-casualmente-tem-um-sorriso-largo-e-brilhante-feliz-por-ser-fotografada-isolada-sobre-uma-parede-branca-conceito-de-emocoes-e-sentimentos-positivos_273609-16456.jpg"
     },
     {
@@ -140,7 +140,7 @@
       "city": "n/d",
       "state": "n/d",
       "occupation": "Front-End",
-      "level": "Sénior",
+      "level": "Sênior",
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRBNsdRR3iapAMlBgLNQXEPLUU9kLqAHvvdx7hb1AcPXEVc4qbM7G0QauPQluak7cUM2I&usqp=CAU"
     },
     {
@@ -153,6 +153,20 @@
       "occupation": "Back-End",
       "level": "Júnior",
       "avatar": "https://st2.depositphotos.com/1514397/5893/i/600/depositphotos_58939069-stock-photo-woman-with-ideal-skin.jpg"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Júnior"
+    },
+    {
+      "id": 2,
+      "name": "Sênior"
+    },
+    {
+      "id": 3,
+      "name": "Pleno"
     }
   ]
 }

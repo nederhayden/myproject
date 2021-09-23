@@ -1,10 +1,10 @@
 import React from "react";
-import "./filter.scss";
 import { Genero, Competencia, Nivel } from "./Modules";
+import styles from "./Filter.module.scss";
 
 export function Filter() {
   return (
-    <div className="filter">
+    <div className={styles.filter}>
       <h1>Filtro</h1>
       <Genero />
       <Competencia />

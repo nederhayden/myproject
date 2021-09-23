@@ -2,27 +2,26 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import logo from "../../assets/logo.png";
-import "./header.scss";
+import styles from "./Header.module.scss";
 
 export default function Header() {
   return (
-    <div className="header">
-      <div className="logo">
+    <div className={styles.header}>
+      <div className={styles.logo}>
         <Link to="/">
           <img src={logo} alt="Logo" />
         </Link>
         <strong>Developers</strong>
       </div>
-      <div className="menu-section">
-        <div className="menu-toggle">
-          <div className="one"></div>
-          <div className="two"></div>
-          <div className="three"></div>
+      <div className={styles.menu_section}>
+        <div className={styles.menu_toggle}>
+          <div className={styles.one}></div>
+          <div className={styles.two}></div>
+          <div className={styles.three}></div>
         </div>
-        <div className="login">
+        <div className={styles.register_dev}>
           <ul>
-            <Link to="sem link ainda">Entrar</Link>
-            <Link to="sem link ainda">Cadastra-se</Link>
+            <Link to="/register">Cadastrar Dev</Link>
           </ul>
         </div>
       </div>

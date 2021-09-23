@@ -1,15 +1,16 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../contexts/Contexts";
 import { Checkbox } from "../Checkbox/Checkbox";
+import styles from "./Modules.module.scss";
 
 export function Genero() {
   const { checked, profiles, setProfiles, changeCheck } =
     useContext(GlobalContext);
 
   return (
-    <details className="genero">
-      <summary className="title">Gênero</summary>
-      <div className="options">
+    <details className={styles.genero}>
+      <summary className={styles.title}>Gênero</summary>
+      <div className={styles.options}>
         <label>
           <Checkbox
             value="Masculino"
@@ -53,9 +54,9 @@ export function Competencia() {
     useContext(GlobalContext);
 
   return (
-    <details className="competencia">
-      <summary className="title">Competência</summary>
-      <div className="options">
+    <details className={styles.competencia}>
+      <summary className={styles.title}>Competência</summary>
+      <div className={styles.options}>
         <label>
           <Checkbox
             value="Front-End"
@@ -116,9 +117,9 @@ export function Nivel() {
     useContext(GlobalContext);
 
   return (
-    <details className="nivel">
-      <summary className="title">Nível</summary>
-      <div className="options">
+    <details className={styles.nivel}>
+      <summary className={styles.title}>Nível</summary>
+      <div className={styles.options}>
         <label>
           <Checkbox
             value="Júnior"

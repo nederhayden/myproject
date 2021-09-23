@@ -52,7 +52,7 @@ $white: #fff;
     }
   }
 
-  .login {
+  .register_dev {
     display: flex;
     padding: 20px;
 
@@ -62,6 +62,7 @@ $white: #fff;
       margin-left: 20px;
       font-size: 1.4rem;
       font-weight: bold;
+      margin-right: 26px;
 
       &:hover {
         text-shadow: 1px 1px 0 lighten($blue, 15%);
@@ -86,13 +87,13 @@ $white: #fff;
     margin: 6px auto;
   }
 
-  .menu-toggle {
+  .menu_toggle {
     width: 40px;
     height: 30px;
   }
 
   /* Menu Aberto */
-  .menu-section.on {
+  .menu_section.on {
     position: absolute;
     top: 0;
     left: 0;
@@ -106,37 +107,37 @@ $white: #fff;
   }
 
   /* Faz aparecer novamente a classe login */
-  .menu-section.on .login {
+  .menu_section.on .login {
     display: block;
   }
 
   /* Move o menu para o canto direito */
-  .menu-section.on .menu-toggle {
+  .menu_section.on .menu_toggle {
     position: absolute;
     right: 60px;
     top: 45px;
   }
 
-  /* Transforma o menu-toggle em um "X" */
-  .menu-section.on .menu-toggle .one {
+  /* Transforma o menu_toggle em um "X" */
+  .menu_section.on .menu_toggle .one {
     transform: rotate(45deg) translate(7px, 7px);
   }
 
-  .menu-section.on .menu-toggle .two {
+  .menu_section.on .menu_toggle .two {
     opacity: 0;
   }
 
-  .menu-section.on .menu-toggle .three {
+  .menu_section.on .menu_toggle .three {
     transform: rotate(-45deg) translate(8px, -9px);
   }
 
-  .menu-section.on ul {
+  .menu_section.on ul {
     text-align: center;
     display: flex;
     flex-direction: column;
   }
 
-  .menu-section.on ul a {
+  .menu_section.on ul a {
     transition-duration: 0.5s;
     line-height: 8rem;
     font-size: 3rem;
