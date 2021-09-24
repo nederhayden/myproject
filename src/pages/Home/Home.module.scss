@@ -9,6 +9,12 @@ $shadow: 0 0 1em $blue;
   display: flex;
 }
 
+.home_profiles {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
 .profiles {
   display: grid;
   grid-template-columns: repeat(5, 240px);

@@ -1,22 +1,61 @@
 import { useState, useEffect } from "react";
+import api from "../../services/api";
 import SubmitButton from "../../components/Form/SubmitButton";
 import Input from "../../components/Form/Input";
 import Select from "../../components/Form/Select";
 
 export default function Register({ handleSubmit, registerData }) {
   const [categories, setCategories] = useState([]);
+  const [genders, setGenders] = useState([]);
+  const [states, setStates] = useState([]);
+  const [occupations, setOccupations] = useState([]);
   const [register, setRegister] = useState(registerData || {});
 
   useEffect(() => {
-    fetch("http://localhost:3333/categories", {
-      method: "GET",
-      headers: { "Content-Type": "application/json" },
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
-        setCategories(data);
-      })
-      .catch((err) => console.error(err));
+    async function getCategories() {
+      const response = await api.get("categories");
+
+      const data = response.data.map((profile) => ({
+        ...profile,
+      }));
+
+      setCategories(data);
+    }
+
+    async function getGenders() {
+      const response = await api.get("genders");
+
+      const data = response.data.map((profile) => ({
+        ...profile,
+      }));
+
+      setGenders(data);
+    }
+
+    async function getStates() {
+      const response = await api.get("states");
+
+      const data = response.data.map((profile) => ({
+        ...profile,
+      }));
+
+      setStates(data);
+    }
+
+    async function getOccupations() {
+      const response = await api.get("occupations");
+
+      const data = response.data.map((profile) => ({
+        ...profile,
+      }));
+
+      setOccupations(data);
+    }
+
+    getCategories();
+    getGenders();
+    getStates();
+    getOccupations();
   }, []);
 
   function handleChange(e) {
@@ -27,6 +66,36 @@ export default function Register({ handleSubmit, registerData }) {
     setRegister({
       ...register,
       category: {
+        id: e.target.value,
+        name: e.target.options[e.target.selectedIndex].text,
+      },
+    });
+  }
+
+  function handleGender(e) {
+    setRegister({
+      ...register,
+      gender: {
+        id: e.target.value,
+        name: e.target.options[e.target.selectedIndex].text,
+      },
+    });
+  }
+
+  function handleStates(e) {
+    setRegister({
+      ...register,
+      state: {
+        id: e.target.value,
+        name: e.target.options[e.target.selectedIndex].text,
+      },
+    });
+  }
+
+  function handleOccupations(e) {
+    setRegister({
+      ...register,
+      occupation: {
         id: e.target.value,
         name: e.target.options[e.target.selectedIndex].text,
       },
@@ -64,7 +133,7 @@ export default function Register({ handleSubmit, registerData }) {
       <div>
         <Input
           type="text"
-          text="Cidade/Estado"
+          text="Cidade"
           name="name"
           placeholder="Informe sua cidade e estado"
           handleOnChange={handleChange}
@@ -72,11 +141,35 @@ export default function Register({ handleSubmit, registerData }) {
       </div>
 
       <Select
+        name="state_id"
+        text="Estado"
+        options={states}
+        handleOnChange={handleStates}
+        value={register.state ? register.state.id : ""}
+      />
+
+      <Select
+        name="occupation_id"
+        text="Cargo"
+        options={occupations}
+        handleOnChange={handleOccupations}
+        value={register.occupation ? register.occupation.id : ""}
+      />
+
+      <Select
         name="category_id"
-        text="Selecione seu nível"
+        text="Nível"
         options={categories}
         handleOnChange={handleCategory}
         value={register.category ? register.category.id : ""}
+      />
+
+      <Select
+        name="gender_id"
+        text="Gênero"
+        options={genders}
+        handleOnChange={handleGender}
+        value={register.gender ? register.gender.id : ""}
       />
 
       <SubmitButton text="Enviar Cadastro" />

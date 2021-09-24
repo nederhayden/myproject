@@ -1,5 +1,5 @@
 import { useHistory } from "react-router-dom";
-import Register from "./NewRegister";
+import Register from "./Register";
 
 export default function NewProject() {
   const history = useHistory();
