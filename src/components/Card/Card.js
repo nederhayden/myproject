@@ -18,7 +18,7 @@ export function Card({ id, avatar, name, age, city, state, occupation }) {
         <span></span>
         <span>{occupation}</span>
       </div>
-      <button className={styles.show_more}>Show More</button>
+      <button className={styles.show_more}>Detalhes</button>
     </div>
     // </div>
   );

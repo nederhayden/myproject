@@ -1,0 +1,20 @@
+$background-card: #1b1b1b;
+$blue: #4dcfe1;
+$shadow: 0 0 1em $blue;
+$black: #000;
+
+.btn {
+  background-color: $background-card;
+  color: #fff;
+  padding: 0.7em 1.2em;
+  text-decoration: none;
+  transition: 0.5s;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    border: 1px solid $blue;
+    box-shadow: $shadow;
+    background: $black;
+  }
+}

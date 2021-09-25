@@ -1,3 +1,5 @@
+import styles from "./Input.module.scss";
+
 export default function Input({
   type,
   text,
@@ -7,7 +9,7 @@ export default function Input({
   value,
 }) {
   return (
-    <div>
+    <div className={styles.form_control}>
       <label htmlFor={name}>{text}:</label>
       <input
         type={text}

@@ -3,6 +3,7 @@ import api from "../../services/api";
 import SubmitButton from "../../components/Form/SubmitButton";
 import Input from "../../components/Form/Input";
 import Select from "../../components/Form/Select";
+import styles from "./Register.module.scss";
 
 export default function Register({ handleSubmit, registerData }) {
   const [categories, setCategories] = useState([]);
@@ -109,7 +110,7 @@ export default function Register({ handleSubmit, registerData }) {
   };
 
   return (
-    <form onSubmit={submit}>
+    <form className={styles.form} onSubmit={submit}>
       <h1>Novo Cadastro</h1>
       <div>
         <span>

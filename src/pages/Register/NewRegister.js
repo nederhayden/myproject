@@ -1,5 +1,6 @@
 import { useHistory } from "react-router-dom";
 import Register from "./Register";
+import styles from "./NewRegister.module.scss";
 
 export default function NewProject() {
   const history = useHistory();
@@ -21,8 +22,7 @@ export default function NewProject() {
   }
 
   return (
-    <div>
-      <h1>Novo Cadastro</h1>
+    <div className={styles.container_form}>
       <Register handleSubmit={createPost} />
     </div>
   );
