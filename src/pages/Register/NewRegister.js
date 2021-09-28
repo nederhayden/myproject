@@ -22,7 +22,7 @@ export default function NewProject() {
   }
 
   return (
-    <div className={styles.container_form}>
+    <div>
       <Register handleSubmit={createPost} />
     </div>
   );

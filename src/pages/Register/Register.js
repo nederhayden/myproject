@@ -110,70 +110,72 @@ export default function Register({ handleSubmit, registerData }) {
   };
 
   return (
-    <form className={styles.form} onSubmit={submit}>
-      <h1>Novo Cadastro</h1>
-      <div>
-        <span>
+    <div className={styles.form_container}>
+      <form className={styles.form} onSubmit={submit}>
+        <h1>Novo Cadastro</h1>
+        <div>
+          <span>
+            <Input
+              type="text"
+              text="Nome"
+              name="name"
+              placeholder="Digite seu nome completo"
+              handleOnChange={handleChange}
+            />
+            <Input
+              type="number"
+              text="Idade"
+              name="name"
+              placeholder="Informe sua idade"
+              handleOnChange={handleChange}
+            />
+          </span>
+        </div>
+
+        <div>
           <Input
             type="text"
-            text="Nome"
+            text="Cidade"
             name="name"
-            placeholder="Digite seu nome completo"
+            placeholder="Informe sua cidade e estado"
             handleOnChange={handleChange}
           />
-          <Input
-            type="number"
-            text="Idade"
-            name="name"
-            placeholder="Informe sua idade"
-            handleOnChange={handleChange}
-          />
-        </span>
-      </div>
+        </div>
 
-      <div>
-        <Input
-          type="text"
-          text="Cidade"
-          name="name"
-          placeholder="Informe sua cidade e estado"
-          handleOnChange={handleChange}
+        <Select
+          name="state_id"
+          text="Estado"
+          options={states}
+          handleOnChange={handleStates}
+          value={register.state ? register.state.id : ""}
         />
-      </div>
 
-      <Select
-        name="state_id"
-        text="Estado"
-        options={states}
-        handleOnChange={handleStates}
-        value={register.state ? register.state.id : ""}
-      />
+        <Select
+          name="occupation_id"
+          text="Cargo"
+          options={occupations}
+          handleOnChange={handleOccupations}
+          value={register.occupation ? register.occupation.id : ""}
+        />
 
-      <Select
-        name="occupation_id"
-        text="Cargo"
-        options={occupations}
-        handleOnChange={handleOccupations}
-        value={register.occupation ? register.occupation.id : ""}
-      />
+        <Select
+          name="category_id"
+          text="Nível"
+          options={categories}
+          handleOnChange={handleCategory}
+          value={register.category ? register.category.id : ""}
+        />
 
-      <Select
-        name="category_id"
-        text="Nível"
-        options={categories}
-        handleOnChange={handleCategory}
-        value={register.category ? register.category.id : ""}
-      />
+        <Select
+          name="gender_id"
+          text="Gênero"
+          options={genders}
+          handleOnChange={handleGender}
+          value={register.gender ? register.gender.id : ""}
+        />
 
-      <Select
-        name="gender_id"
-        text="Gênero"
-        options={genders}
-        handleOnChange={handleGender}
-        value={register.gender ? register.gender.id : ""}
-      />
-
-      <SubmitButton text="Enviar Cadastro" />
-    </form>
+        <SubmitButton text="Enviar Cadastro" />
+      </form>
+    </div>
   );
 }
