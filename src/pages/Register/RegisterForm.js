@@ -1,16 +1,40 @@
 import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 import api from "../../services/api";
 import SubmitButton from "../../components/Form/SubmitButton";
 import Input from "../../components/Form/Input";
 import Select from "../../components/Form/Select";
-import styles from "./Register.module.scss";
+import styles from "./RegisterForm.module.scss";
+import Upload from "../../components/Form/Upload";
 
-export default function Register({ handleSubmit, registerData }) {
+export default function RegisterForm({ profileData }) {
   const [categories, setCategories] = useState([]);
   const [genders, setGenders] = useState([]);
   const [states, setStates] = useState([]);
   const [occupations, setOccupations] = useState([]);
-  const [register, setRegister] = useState(registerData || {});
+  const [profile, setProfile] = useState(profileData || {});
+  const [image, setImage] = useState("");
+  const history = useHistory();
+
+  const successToast = () => {
+    toast.success("Projeto criado com sucesso");
+  };
+
+  function createPost(profile) {
+    fetch("http://localhost:3333/profiles", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(profile),
+    })
+      .then((resp) => resp.json())
+      .then(() => {
+        history.push("/", successToast());
+      })
+      .catch((error) => console.log(error));
+  }
 
   useEffect(() => {
     async function getCategories() {
@@ -59,13 +83,22 @@ export default function Register({ handleSubmit, registerData }) {
     getOccupations();
   }, []);
 
+  const submit = (e) => {
+    e.preventDefault();
+    createPost(profile);
+  };
+
   function handleChange(e) {
-    setRegister({ ...register, [e.target.name]: e.target.value });
+    setProfile({ ...profile, [e.target.name]: e.target.value });
+  }
+
+  function handleAvatar(e) {
+    setProfile({ ...profile, [e.target.name]: e.target.value });
   }
 
   function handleCategory(e) {
-    setRegister({
-      ...register,
+    setProfile({
+      ...profile,
       category: {
         id: e.target.value,
         name: e.target.options[e.target.selectedIndex].text,
@@ -74,8 +107,8 @@ export default function Register({ handleSubmit, registerData }) {
   }
 
   function handleGender(e) {
-    setRegister({
-      ...register,
+    setProfile({
+      ...profile,
       gender: {
         id: e.target.value,
         name: e.target.options[e.target.selectedIndex].text,
@@ -84,8 +117,8 @@ export default function Register({ handleSubmit, registerData }) {
   }
 
   function handleStates(e) {
-    setRegister({
-      ...register,
+    setProfile({
+      ...profile,
       state: {
         id: e.target.value,
         name: e.target.options[e.target.selectedIndex].text,
@@ -94,20 +127,14 @@ export default function Register({ handleSubmit, registerData }) {
   }
 
   function handleOccupations(e) {
-    setRegister({
-      ...register,
+    setProfile({
+      ...profile,
       occupation: {
         id: e.target.value,
         name: e.target.options[e.target.selectedIndex].text,
       },
     });
   }
-
-  const submit = (e) => {
-    e.preventDefault();
-    // console.log(project);
-    handleSubmit(register);
-  };
 
   return (
     <div className={styles.form_container}>
@@ -121,13 +148,15 @@ export default function Register({ handleSubmit, registerData }) {
               name="name"
               placeholder="Digite seu nome completo"
               handleOnChange={handleChange}
+              value={profile.name ? profile.name : ""}
             />
             <Input
               type="number"
               text="Idade"
-              name="name"
+              name="age"
               placeholder="Informe sua idade"
               handleOnChange={handleChange}
+              value={profile.age ? profile.age : ""}
             />
           </span>
         </div>
@@ -136,9 +165,10 @@ export default function Register({ handleSubmit, registerData }) {
           <Input
             type="text"
             text="Cidade"
-            name="name"
+            name="city"
             placeholder="Informe sua cidade e estado"
             handleOnChange={handleChange}
+            value={profile.city ? profile.city : ""}
           />
         </div>
 
@@ -147,7 +177,7 @@ export default function Register({ handleSubmit, registerData }) {
           text="Estado"
           options={states}
           handleOnChange={handleStates}
-          value={register.state ? register.state.id : ""}
+          value={profile.state ? profile.state.id : ""}
         />
 
         <Select
@@ -155,7 +185,7 @@ export default function Register({ handleSubmit, registerData }) {
           text="Cargo"
           options={occupations}
           handleOnChange={handleOccupations}
-          value={register.occupation ? register.occupation.id : ""}
+          value={profile.occupation ? profile.occupation.id : ""}
         />
 
         <Select
@@ -163,7 +193,7 @@ export default function Register({ handleSubmit, registerData }) {
           text="Nível"
           options={categories}
           handleOnChange={handleCategory}
-          value={register.category ? register.category.id : ""}
+          value={profile.category ? profile.category.id : ""}
         />
 
         <Select
@@ -171,8 +201,21 @@ export default function Register({ handleSubmit, registerData }) {
           text="Gênero"
           options={genders}
           handleOnChange={handleGender}
-          value={register.gender ? register.gender.id : ""}
+          value={profile.gender ? profile.gender.id : ""}
         />
+
+        {/* <Upload handleOnChange={handleAvatar} /> */}
+        <div>
+          <Input
+            type="url"
+            text="Imagem"
+            name="avatar"
+            placeholder="https://example.com"
+            pattern="https://.*"
+            handleOnChange={handleAvatar}
+            // value={profile.avatar ? profile.avatar : ""}
+          />
+        </div>
 
         <SubmitButton text="Enviar Cadastro" />
       </form>

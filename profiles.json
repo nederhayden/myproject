@@ -1,37 +1,50 @@
 {
   "profiles": [
     {
-      "id": 1,
       "name": "Neder Hayden",
-      "age": 29,
-      "gender": "Masculino",
+      "age": "29",
       "city": "Manaus",
-      "state": "AM",
-      "occupation": "Front-End",
-      "level": "Júnior",
-      "avatar": "https://avatars.githubusercontent.com/u/33813497?s=400&u=cc801eec8c0f981dc7f9543c40a9f3ea7f22bd29&v=4"
+      "state": {
+        "id": "4",
+        "name": "AM"
+      },
+      "occupation": {
+        "id": "1",
+        "name": "Front-End"
+      },
+      "category": {
+        "id": "1",
+        "name": "Júnior"
+      },
+      "gender": {
+        "id": "1",
+        "name": "Masculino"
+      },
+      "avatar": "https://avatars.githubusercontent.com/u/33813497?s=400&u=cc801eec8c0f981dc7f9543c40a9f3ea7f22bd29&v=4",
+      "id": 8
     },
     {
-      "id": 2,
       "name": "Marcos Murillo",
-      "age": 25,
-      "gender": "Masculino",
+      "age": "25",
       "city": "Campinas",
-      "state": "SP",
-      "occupation": "Front-End",
-      "level": "Sênior",
-      "avatar": "https://avatars.githubusercontent.com/u/48732349?v=4"
-    },
-    {
-      "id": 3,
-      "name": "Michael Sivori",
-      "age": 30,
-      "gender": "Masculino",
-      "city": "Petrópolis",
-      "state": "RJ",
-      "occupation": "Back-End",
-      "level": "Sênior",
-      "avatar": "https://media-exp1.licdn.com/dms/image/C4E35AQEHDIqM4G1a0w/profile-framedphoto-shrink_800_800/0/1620496490591?e=1628013600&v=beta&t=qecNWosj3We560_65YunCFdD8yum47T4oQTzOUxGWYY"
+      "state": {
+        "id": "25",
+        "name": "SP"
+      },
+      "occupation": {
+        "id": "1",
+        "name": "Front-End"
+      },
+      "category": {
+        "id": "3",
+        "name": "Sênior"
+      },
+      "gender": {
+        "id": "1",
+        "name": "Masculino"
+      },
+      "avatar": "https://avatars.githubusercontent.com/u/48732349?v=4",
+      "id": 9
     }
   ],
   "occupations": [
@@ -55,11 +68,11 @@
     },
     {
       "id": 2,
-      "name": "Sênior"
+      "name": "Pleno"
     },
     {
       "id": 3,
-      "name": "Pleno"
+      "name": "Sênior"
     }
   ],
   "genders": [
@@ -183,4 +196,3 @@
     }
   ]
 }
-

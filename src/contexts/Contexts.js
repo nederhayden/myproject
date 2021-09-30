@@ -1,33 +1,10 @@
-import React, { createContext, useState, useEffect } from "react";
-import api from "../services/api";
+import React, { createContext, useState } from "react";
 
 export const GlobalContext = createContext();
 
 export default function ContextProvider({ children }) {
   const [checked, setChecked] = useState(false);
-  const [profiles, setProfiles] = useState([]);
   const [sortType, setSortType] = useState("name");
-
-  useEffect(() => {
-    async function loadProfiles(type) {
-      const response = await api.get("profiles");
-      const types = {
-        name: "name",
-        age: "age",
-      };
-      const sortProperty = types[type];
-
-      const data = response.data
-        .sort((a, b) => (a[sortProperty] < b[sortProperty] ? -1 : 1))
-        .map((profile) => ({
-          ...profile,
-        }));
-
-      setProfiles(data);
-    }
-
-    loadProfiles(sortType);
-  }, [sortType]);
 
   function changeCheck(event) {
     const check = event.target.checked;
@@ -37,7 +14,12 @@ export default function ContextProvider({ children }) {
 
   return (
     <GlobalContext.Provider
-      value={{ checked, changeCheck, profiles, setProfiles, setSortType }}
+      value={{
+        checked,
+        changeCheck,
+        sortType,
+        setSortType,
+      }}
     >
       {children}
     </GlobalContext.Provider>

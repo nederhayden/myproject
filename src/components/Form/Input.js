@@ -7,17 +7,19 @@ export default function Input({
   placeholder,
   handleOnChange,
   value,
+  pattern,
 }) {
   return (
     <div className={styles.form_control}>
       <label htmlFor={name}>{text}:</label>
       <input
-        type={text}
+        type={type}
         name={name}
         id={name}
         placeholder={placeholder}
         onChange={handleOnChange}
         value={value}
+        pattern={pattern}
       />
     </div>
   );

@@ -1,25 +1,40 @@
-import { useContext } from "react";
-import { useLocation } from "react-router-dom";
+import { useState, useEffect, useContext } from "react";
 import { GlobalContext } from "../../contexts/Contexts";
 import { Card } from "../../components/Card/Card";
 import { Filter } from "../../components/Filter/Filter";
-import Message from "../../components/Message";
 import OrderProfiles from "../../components/Filter/OrderProfiles";
+import api from "../../services/api";
+
 import styles from "./Home.module.scss";
 
 export default function Home() {
-  const { profiles } = useContext(GlobalContext);
+  const [profiles, setProfiles] = useState([]);
+  const { sortType } = useContext(GlobalContext);
 
-  const location = useLocation();
-  let message = "";
-  if (location.state) {
-    message = location.state.message;
-  }
+  useEffect(() => {
+    async function loadProfiles(type) {
+      const response = await api.get("profiles");
+      const types = {
+        name: "name",
+        age: "age",
+      };
+      const sortProperty = types[type];
+
+      const data = response.data
+        .sort((a, b) => (a[sortProperty] < b[sortProperty] ? -1 : 1))
+        .map((profile) => ({
+          ...profile,
+        }));
+
+      setProfiles(data);
+    }
+
+    loadProfiles(sortType);
+  }, [sortType]);
 
   return (
     <div className={styles.home}>
       <Filter />
-      {message && <Message type="success" msg={message} />}
       <div className={styles.home_profiles}>
         <OrderProfiles />
         <div className={styles.profiles}>
@@ -31,8 +46,8 @@ export default function Home() {
                 name={profile.name}
                 age={profile.age}
                 city={profile.city}
-                state={profile.state}
-                occupation={profile.occupation}
+                state={profile.state.name}
+                occupation={profile.occupation.name}
               />
             ))}
         </div>

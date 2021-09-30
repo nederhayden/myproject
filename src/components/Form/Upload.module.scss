@@ -1,0 +1,13 @@
+.drop_container {
+  border: 1px dashed #dddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: height 0.2s ease;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
