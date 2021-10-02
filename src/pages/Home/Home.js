@@ -4,12 +4,17 @@ import { Card } from "../../components/Card/Card";
 import { Filter } from "../../components/Filter/Filter";
 import OrderProfiles from "../../components/Filter/OrderProfiles";
 import api from "../../services/api";
+import { toast } from "react-toastify";
 
 import styles from "./Home.module.scss";
 
 export default function Home() {
   const [profiles, setProfiles] = useState([]);
   const { sortType } = useContext(GlobalContext);
+
+  const successToast = () => {
+    toast.success("Projeto removido com sucesso!");
+  };
 
   useEffect(() => {
     async function loadProfiles(type) {
@@ -32,6 +37,20 @@ export default function Home() {
     loadProfiles(sortType);
   }, [sortType]);
 
+  function removeProfile(id) {
+    fetch(`http://localhost:3333/profiles/${id}`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/" },
+    })
+      .then((resp) => resp.json())
+      .then(() => {
+        const removeProfile = profiles.filter((profile) => profile.id !== id);
+        setProfiles(removeProfile);
+        successToast();
+      })
+      .catch((err) => console.log(err));
+  }
+
   return (
     <div className={styles.home}>
       <Filter />
@@ -48,6 +67,7 @@ export default function Home() {
                 city={profile.city}
                 state={profile.state.name}
                 occupation={profile.occupation.name}
+                handleRemove={() => removeProfile(profile.id)}
               />
             ))}
         </div>

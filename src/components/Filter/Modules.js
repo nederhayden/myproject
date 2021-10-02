@@ -63,14 +63,14 @@ export function Competencia() {
             text="Front-End"
             checked={checked.id}
             onChange={changeCheck}
-            /* onClick={() => {
+            onClick={() => {
               if (!checked) {
                 const profileFiltered = profiles.filter(
                   (profile) => profile.occupation === "Front-End"
                 );
                 setProfiles(profileFiltered);
               }
-            }} */
+            }}
           />
         </label>
 
@@ -80,14 +80,14 @@ export function Competencia() {
             text="Back-End"
             checked={checked.id}
             onChange={changeCheck}
-            /* onClick={() => {
+            onClick={() => {
               if (!checked) {
                 const profileFiltered = profiles.filter(
                   (profile) => profile.occupation === "Back-End"
                 );
                 setProfiles(profileFiltered);
               }
-            }} */
+            }}
           />
         </label>
 
@@ -97,14 +97,14 @@ export function Competencia() {
             text="Fullstack"
             checked={checked.id}
             onChange={changeCheck}
-            /* onClick={() => {
+            onClick={() => {
               if (!checked) {
                 const profileFiltered = profiles.filter(
                   (profile) => profile.occupation === "Fullstack"
                 );
                 setProfiles(profileFiltered);
               }
-            }} */
+            }}
           />
         </label>
       </div>
@@ -126,14 +126,14 @@ export function Nivel() {
             text="Júnior"
             checked={checked.id}
             onChange={changeCheck}
-            /* onClick={() => {
+            onClick={() => {
               if (!checked) {
                 const profileFiltered = profiles.filter(
                   (profile) => profile.level === "Júnior"
                 );
                 setProfiles(profileFiltered);
               }
-            }} */
+            }}
           />
         </label>
 
@@ -143,14 +143,14 @@ export function Nivel() {
             text="Pleno"
             checked={checked.id}
             onChange={changeCheck}
-            /* onClick={() => {
+            onClick={() => {
               if (!checked) {
                 const profileFiltered = profiles.filter(
                   (profile) => profile.level === "Pleno"
                 );
                 setProfiles(profileFiltered);
               }
-            }} */
+            }}
           />
         </label>
 
@@ -160,14 +160,14 @@ export function Nivel() {
             text="Sênior"
             checked={checked.id}
             onChange={changeCheck}
-            /* onClick={() => {
+            onClick={() => {
               if (!checked) {
                 const profileFiltered = profiles.filter(
                   (profile) => profile.level === "Sênior"
                 );
                 setProfiles(profileFiltered);
               }
-            }} */
+            }}
           />
         </label>
       </div>

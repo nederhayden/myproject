@@ -6,7 +6,6 @@ import SubmitButton from "../../components/Form/SubmitButton";
 import Input from "../../components/Form/Input";
 import Select from "../../components/Form/Select";
 import styles from "./RegisterForm.module.scss";
-import Upload from "../../components/Form/Upload";
 
 export default function RegisterForm({ profileData }) {
   const [categories, setCategories] = useState([]);
@@ -14,7 +13,6 @@ export default function RegisterForm({ profileData }) {
   const [states, setStates] = useState([]);
   const [occupations, setOccupations] = useState([]);
   const [profile, setProfile] = useState(profileData || {});
-  const [image, setImage] = useState("");
   const history = useHistory();
 
   const successToast = () => {
