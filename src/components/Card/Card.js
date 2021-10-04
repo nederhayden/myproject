@@ -20,10 +20,10 @@ export function Card({
 
   return (
     <div key={id} className={styles.card}>
-      <div className={styles.wrapper_img}>
+      <div className={styles.wrapperImg}>
         <img src={avatar} alt={`Avatar de ${name}`} />
       </div>
-      <div className={styles.personal_details}>
+      <div className={styles.personalDetails}>
         <strong>{name}</strong>
         <div className={styles.divider}>
           <span>{age}</span>
@@ -33,8 +33,8 @@ export function Card({
         </div>
         <span>{occupation}</span>
       </div>
-      <button className={styles.show_more}>Detalhes</button>
-      <div className={styles.project_card_actions}>
+      <button className={styles.showMore}>Detalhes</button>
+      <div className={styles.projectCardActions}>
         <Link to={`/profile/${id}`}>
           <BsPencil /> Editar
         </Link>

@@ -10,7 +10,7 @@ export default function Input({
   pattern,
 }) {
   return (
-    <div className={styles.form_control}>
+    <div className={styles.formControl}>
       <label htmlFor={name}>{text}:</label>
       <input
         type={type}

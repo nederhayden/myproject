@@ -13,13 +13,13 @@ export default function Header() {
         </Link>
         <strong>Developers</strong>
       </div>
-      <div className={styles.menu_section}>
-        <div className={styles.menu_toggle}>
+      <div className={styles.menuSection}>
+        <div className={styles.menuToggle}>
           <div className={styles.one}></div>
           <div className={styles.two}></div>
           <div className={styles.three}></div>
         </div>
-        <div className={styles.register_dev}>
+        <div className={styles.registerDev}>
           <ul>
             <Link to="/register">Cadastrar Dev</Link>
           </ul>

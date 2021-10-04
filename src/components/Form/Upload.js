@@ -22,7 +22,7 @@ export default function Upload() {
   }, [isDragActive, isDragReject]);
 
   return (
-    <div className={styles.drop_container} {...getRootProps()}>
+    <div className={styles.dropContainer} {...getRootProps()}>
       <input {...getInputProps()} />
       {renderDragMessage()}
     </div>

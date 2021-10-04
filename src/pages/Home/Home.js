@@ -54,7 +54,7 @@ export default function Home() {
   return (
     <div className={styles.home}>
       <Filter />
-      <div className={styles.home_profiles}>
+      <div className={styles.homeProfiles}>
         <OrderProfiles />
         <div className={styles.profiles}>
           {profiles.length > 0 &&

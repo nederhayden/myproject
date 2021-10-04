@@ -21,7 +21,7 @@ $shadow: 0 0 1em $blue;
     background: $black;
   }
 
-  .wrapper_img {
+  .wrapperImg {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +35,7 @@ $shadow: 0 0 1em $blue;
     }
   }
 
-  .personal_details {
+  .personalDetails {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,7 +62,7 @@ $shadow: 0 0 1em $blue;
     }
   }
 
-  .show_more {
+  .showMore {
     margin: 0 0.6rem;
     height: 1.6rem;
     overflow: hidden;
@@ -81,7 +81,7 @@ $shadow: 0 0 1em $blue;
     }
   }
 
-  .project_card_actions {
+  .projectCardActions {
     display: flex;
     justify-content: center;
 

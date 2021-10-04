@@ -52,7 +52,7 @@ $white: #fff;
     }
   }
 
-  .register_dev {
+  .registerDev {
     display: flex;
     padding: 20px;
 
@@ -87,13 +87,13 @@ $white: #fff;
     margin: 6px auto;
   }
 
-  .menu_toggle {
+  .menuToggle {
     width: 40px;
     height: 30px;
   }
 
   /* Menu Aberto */
-  .menu_section.on {
+  .menuSection.on {
     position: absolute;
     top: 0;
     left: 0;
@@ -107,37 +107,37 @@ $white: #fff;
   }
 
   /* Faz aparecer novamente a classe login */
-  .menu_section.on .login {
+  .menuSection.on .login {
     display: block;
   }
 
   /* Move o menu para o canto direito */
-  .menu_section.on .menu_toggle {
+  .menuSection.on .menuToggle {
     position: absolute;
     right: 60px;
     top: 45px;
   }
 
-  /* Transforma o menu_toggle em um "X" */
-  .menu_section.on .menu_toggle .one {
+  /* Transforma o menuToggle em um "X" */
+  .menuSection.on .menuToggle .one {
     transform: rotate(45deg) translate(7px, 7px);
   }
 
-  .menu_section.on .menu_toggle .two {
+  .menuSection.on .menuToggle .two {
     opacity: 0;
   }
 
-  .menu_section.on .menu_toggle .three {
+  .menuSection.on .menuToggle .three {
     transform: rotate(-45deg) translate(8px, -9px);
   }
 
-  .menu_section.on ul {
+  .menuSection.on ul {
     text-align: center;
     display: flex;
     flex-direction: column;
   }
 
-  .menu_section.on ul a {
+  .menuSection.on ul a {
     transition-duration: 0.5s;
     line-height: 8rem;
     font-size: 3rem;

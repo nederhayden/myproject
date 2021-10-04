@@ -135,7 +135,7 @@ export default function RegisterForm({ profileData }) {
   }
 
   return (
-    <div className={styles.form_container}>
+    <div className={styles.formContainer}>
       <form className={styles.form} onSubmit={submit}>
         <h1>Novo Cadastro</h1>
         <div>
@@ -171,7 +171,7 @@ export default function RegisterForm({ profileData }) {
         </div>
 
         <Select
-          name="state_id"
+          name="stateId"
           text="Estado"
           options={states}
           handleOnChange={handleStates}
@@ -179,7 +179,7 @@ export default function RegisterForm({ profileData }) {
         />
 
         <Select
-          name="occupation_id"
+          name="occupationId"
           text="Cargo"
           options={occupations}
           handleOnChange={handleOccupations}
@@ -187,7 +187,7 @@ export default function RegisterForm({ profileData }) {
         />
 
         <Select
-          name="category_id"
+          name="categoryId"
           text="Nível"
           options={categories}
           handleOnChange={handleCategory}
@@ -195,7 +195,7 @@ export default function RegisterForm({ profileData }) {
         />
 
         <Select
-          name="gender_id"
+          name="genderId"
           text="Gênero"
           options={genders}
           handleOnChange={handleGender}
