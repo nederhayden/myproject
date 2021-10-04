@@ -11,7 +11,9 @@ export default function Header() {
         <Link to="/">
           <img src={logo} alt="Logo" />
         </Link>
-        <strong>Developers</strong>
+        <Link to="/">
+          <strong>Developers</strong>
+        </Link>
       </div>
       <div className={styles.menuSection}>
         <div className={styles.menuToggle}>
