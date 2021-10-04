@@ -1,8 +1,4 @@
-$background-card: #1b1b1b;
-$background: #26262e;
-$blue: #4dcfe1;
-$shadow: 0 0 1em $blue;
-$black: #000;
+@import "../../styles/variables.scss";
 
 .btn {
   background-color: $blue;
@@ -15,10 +11,10 @@ $black: #000;
   transition: background 0.2s;
   font-weight: bold;
   font-size: 1rem;
-  color: $background-card;
+  color: $background-Container;
 
   &:hover {
-    background: $background;
+    background: $background-App;
     color: $blue;
     border: 2px solid $blue;
   }

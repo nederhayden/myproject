@@ -1,9 +1,4 @@
-$background: #26262e;
-$background-card: #1b1b1b;
-$blue: #4dcfe1;
-$white: #fff;
-$black: #000;
-$shadow: 0 0 1em $blue;
+@import "../../styles/variables.scss";
 
 .wrapper1 {
   margin-left: 120px;
@@ -22,7 +17,7 @@ $shadow: 0 0 1em $blue;
   select {
     min-width: 40px;
     padding: 6px;
-    background: $background-card;
+    background: $background-Container;
     color: $blue;
     border: 1px solid $blue;
     border-radius: 4px;

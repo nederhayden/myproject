@@ -1,8 +1,4 @@
-// $background: #26262e;
-$background-filter: #1b1b1b;
-$blue: #4dcfe1;
-$black: #000;
-$shadow: 0 0 1em $blue;
+@import "../../styles/variables.scss";
 
 details {
   summary {
@@ -24,7 +20,7 @@ details {
   max-width: 500px;
   transition: green 0.25s;
   will-change: green;
-  background: $background-filter;
+  background: $background-Container;
 
   &:first-child {
     margin-top: 24px;

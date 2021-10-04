@@ -1,3 +1,5 @@
+@import "./variables";
+
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +8,8 @@
 }
 
 body {
-  background: #26262e;
-  color: #fff;
+  background: $background-App;
+  color: $white;
   font-family: "Times New Roman", Times, serif;
 }
 

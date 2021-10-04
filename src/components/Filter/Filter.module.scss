@@ -1,6 +1,4 @@
-$background-filter: #1b1b1b;
-$blue: #4dcfe1;
-$shadow: 0 0 1em $blue;
+@import "../../styles/variables.scss";
 
 .filter {
   border: 1px solid $blue;
@@ -9,7 +7,7 @@ $shadow: 0 0 1em $blue;
   width: 20%;
   height: 800px;
   padding: 20px;
-  background: $background-filter;
+  background: $background-Container;
   margin-left: 1.2em;
 
   h1 {
