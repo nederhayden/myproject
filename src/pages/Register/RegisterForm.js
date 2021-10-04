@@ -135,88 +135,90 @@ export default function RegisterForm({ profileData }) {
   }
 
   return (
-    <div className={styles.formContainer}>
-      <form className={styles.form} onSubmit={submit}>
-        <h1>Novo Cadastro</h1>
-        <div>
-          <span>
+    <div className={styles.Container}>
+      <div className={styles.formContainer}>
+        <form className={styles.form} onSubmit={submit}>
+          <h1>Novo Cadastro</h1>
+          <div>
+            <span>
+              <Input
+                type="text"
+                text="Nome"
+                name="name"
+                placeholder="Digite seu nome completo"
+                handleOnChange={handleChange}
+                value={profile.name ? profile.name : ""}
+              />
+              <Input
+                type="number"
+                text="Idade"
+                name="age"
+                placeholder="Informe sua idade"
+                handleOnChange={handleChange}
+                value={profile.age ? profile.age : ""}
+              />
+            </span>
+          </div>
+
+          <div>
             <Input
               type="text"
-              text="Nome"
-              name="name"
-              placeholder="Digite seu nome completo"
+              text="Cidade"
+              name="city"
+              placeholder="Informe sua cidade e estado"
               handleOnChange={handleChange}
-              value={profile.name ? profile.name : ""}
+              value={profile.city ? profile.city : ""}
             />
+          </div>
+
+          <Select
+            name="stateId"
+            text="Estado"
+            options={states}
+            handleOnChange={handleStates}
+            value={profile.state ? profile.state.id : ""}
+          />
+
+          <Select
+            name="occupationId"
+            text="Cargo"
+            options={occupations}
+            handleOnChange={handleOccupations}
+            value={profile.occupation ? profile.occupation.id : ""}
+          />
+
+          <Select
+            name="categoryId"
+            text="Nível"
+            options={categories}
+            handleOnChange={handleCategory}
+            value={profile.category ? profile.category.id : ""}
+          />
+
+          <Select
+            name="genderId"
+            text="Gênero"
+            options={genders}
+            handleOnChange={handleGender}
+            value={profile.gender ? profile.gender.id : ""}
+          />
+
+          {/* <Upload handleOnChange={handleAvatar} /> */}
+          <div>
             <Input
-              type="number"
-              text="Idade"
-              name="age"
-              placeholder="Informe sua idade"
-              handleOnChange={handleChange}
-              value={profile.age ? profile.age : ""}
+              type="url"
+              text="Imagem"
+              name="avatar"
+              placeholder="https://example.com"
+              pattern="https://.*"
+              handleOnChange={handleAvatar}
+              // value={profile.avatar ? profile.avatar : ""}
             />
-          </span>
-        </div>
+          </div>
 
-        <div>
-          <Input
-            type="text"
-            text="Cidade"
-            name="city"
-            placeholder="Informe sua cidade e estado"
-            handleOnChange={handleChange}
-            value={profile.city ? profile.city : ""}
-          />
-        </div>
-
-        <Select
-          name="stateId"
-          text="Estado"
-          options={states}
-          handleOnChange={handleStates}
-          value={profile.state ? profile.state.id : ""}
-        />
-
-        <Select
-          name="occupationId"
-          text="Cargo"
-          options={occupations}
-          handleOnChange={handleOccupations}
-          value={profile.occupation ? profile.occupation.id : ""}
-        />
-
-        <Select
-          name="categoryId"
-          text="Nível"
-          options={categories}
-          handleOnChange={handleCategory}
-          value={profile.category ? profile.category.id : ""}
-        />
-
-        <Select
-          name="genderId"
-          text="Gênero"
-          options={genders}
-          handleOnChange={handleGender}
-          value={profile.gender ? profile.gender.id : ""}
-        />
-
-        {/* <Upload handleOnChange={handleAvatar} /> */}
-        <div>
-          <Input
-            type="url"
-            text="Imagem"
-            name="avatar"
-            placeholder="https://example.com"
-            pattern="https://.*"
-            handleOnChange={handleAvatar}
-            // value={profile.avatar ? profile.avatar : ""}
-          />
-        </div>
-
-        <SubmitButton text="Enviar Cadastro" />
-      </form>
+          <SubmitButton text="Enviar Cadastro" />
+        </form>
+      </div>
     </div>
   );
 }
