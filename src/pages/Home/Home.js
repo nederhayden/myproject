@@ -38,9 +38,9 @@ export default function Home() {
     if (response.status === 200) {
       const newArrProfile = profiles.filter((profile) => profile.id !== id);
       setProfiles(newArrProfile);
-      return toast.success("Usuário removido com sucesso!");
+      return toast.success("Perfil removido com sucesso!");
     } else {
-      return toast.error("Não foi possível remover esse usuário!");
+      return toast.error("Não foi possível remover esse perfil.");
     }
   }
 

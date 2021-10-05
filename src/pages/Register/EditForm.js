@@ -1,22 +1,19 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import api from "../../services/api";
 
-export default function Project() {
+export default function EditForm() {
   const { id } = useParams();
   const [profile, setProfile] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:3333/profiles/${id}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
-        setProfile(data);
-      })
-      .catch((err) => console.error(err));
+    async function getProfileEdit() {
+      const response = await api.get(`/profiles/${id}`);
+
+      setProfile(response);
+    }
+
+    getProfileEdit();
   }, [id]);
 
   return (

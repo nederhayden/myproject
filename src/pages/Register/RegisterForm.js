@@ -15,19 +15,21 @@ export default function RegisterForm({ profileData }) {
   const [profile, setProfile] = useState(profileData || {});
   const history = useHistory();
 
-  function createPost(profile) {
-    fetch("http://localhost:3333/profiles", {
-      method: "POST",
+  async function createPost(profile) {
+    const params = JSON.stringify(profile);
+    const response = await api.post("/profiles", params, {
       headers: {
-        "Content-type": "application/json",
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(profile),
-    })
-      .then((resp) => resp.json())
-      .then(() => {
-        history.push("/", toast.success("Perfil criado com sucesso"));
-      })
-      .catch((error) => console.log(error));
+    });
+
+    if (response.status === 201) {
+      return history.push("/", toast.success("Perfil criado com sucesso"));
+    } else {
+      return toast.error(
+        "Não foi possível criar esse perfil. Tente novamente!"
+      );
+    }
   }
 
   useEffect(() => {
