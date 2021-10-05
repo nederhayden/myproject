@@ -73,100 +73,100 @@
     }
   }
 }
-
+/* ============================= RESPONSIVIDADE ============================= */
 /* Esconde a class login */
-@media (max-width: 830px) {
-  .header .login {
-    display: none;
-  }
+// @media (max-width: 830px) {
+//   .header .login {
+//     display: none;
+//   }
 
-  .one,
-  .two,
-  .three {
-    background-color: $white;
-    height: 5px;
-    width: 100%;
-    margin: 6px auto;
-  }
+//   .one,
+//   .two,
+//   .three {
+//     background-color: $white;
+//     height: 5px;
+//     width: 100%;
+//     margin: 6px auto;
+//   }
 
-  .menuToggle {
-    width: 40px;
-    height: 30px;
-  }
+//   .menuToggle {
+//     width: 40px;
+//     height: 30px;
+//   }
 
-  /* Menu Aberto */
-  .menuSection.on {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: $background-App;
-    width: 100vw;
-    height: 100vh;
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+//   /* Menu Aberto */
+//   .menuSection.on {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     background-color: $background-App;
+//     width: 100vw;
+//     height: 100vh;
+//     z-index: 10;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
 
-  /* Faz aparecer novamente a classe login */
-  .menuSection.on .login {
-    display: block;
-  }
+//   /* Faz aparecer novamente a classe login */
+//   .menuSection.on .login {
+//     display: block;
+//   }
 
-  /* Move o menu para o canto direito */
-  .menuSection.on .menuToggle {
-    position: absolute;
-    right: 60px;
-    top: 45px;
-  }
+//   /* Move o menu para o canto direito */
+//   .menuSection.on .menuToggle {
+//     position: absolute;
+//     right: 60px;
+//     top: 45px;
+//   }
 
-  /* Transforma o menuToggle em um "X" */
-  .menuSection.on .menuToggle .one {
-    transform: rotate(45deg) translate(7px, 7px);
-  }
+//   /* Transforma o menuToggle em um "X" */
+//   .menuSection.on .menuToggle .one {
+//     transform: rotate(45deg) translate(7px, 7px);
+//   }
 
-  .menuSection.on .menuToggle .two {
-    opacity: 0;
-  }
+//   .menuSection.on .menuToggle .two {
+//     opacity: 0;
+//   }
 
-  .menuSection.on .menuToggle .three {
-    transform: rotate(-45deg) translate(8px, -9px);
-  }
+//   .menuSection.on .menuToggle .three {
+//     transform: rotate(-45deg) translate(8px, -9px);
+//   }
 
-  .menuSection.on ul {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-  }
+//   .menuSection.on ul {
+//     text-align: center;
+//     display: flex;
+//     flex-direction: column;
+//   }
 
-  .menuSection.on ul a {
-    transition-duration: 0.5s;
-    line-height: 8rem;
-    font-size: 3rem;
-  }
-}
+//   .menuSection.on ul a {
+//     transition-duration: 0.5s;
+//     line-height: 8rem;
+//     font-size: 3rem;
+//   }
+// }
 
-@media (max-width: 450px) {
-  .header .logo {
-    img {
-      height: 40px;
-    }
+// @media (max-width: 450px) {
+//   .header .logo {
+//     img {
+//       height: 40px;
+//     }
 
-    strong {
-      font-size: 1.8rem;
-    }
-  }
-}
+//     strong {
+//       font-size: 1.8rem;
+//     }
+//   }
+// }
 
-@media (max-width: 380px) {
-  .header .logo {
-    display: block;
-    img {
-      height: 25px;
-    }
+// @media (max-width: 380px) {
+//   .header .logo {
+//     display: block;
+//     img {
+//       height: 25px;
+//     }
 
-    strong {
-      font-size: 1.4rem;
-    }
-  }
-}
+//     strong {
+//       font-size: 1.4rem;
+//     }
+//   }
+// }

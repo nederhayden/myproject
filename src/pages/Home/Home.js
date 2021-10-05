@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useEffect, useContext } from "react";
 import { GlobalContext } from "../../contexts/Contexts";
 import { Card } from "../../components/Card/Card";
 import { Filter } from "../../components/Filter/Filter";
@@ -9,12 +9,7 @@ import { toast } from "react-toastify";
 import styles from "./Home.module.scss";
 
 export default function Home() {
-  const [profiles, setProfiles] = useState([]);
-  const { sortType } = useContext(GlobalContext);
-
-  const successToast = () => {
-    toast.success("Projeto removido com sucesso!");
-  };
+  const { profiles, setProfiles, sortType } = useContext(GlobalContext);
 
   useEffect(() => {
     async function loadProfiles(type) {
@@ -35,20 +30,18 @@ export default function Home() {
     }
 
     loadProfiles(sortType);
-  }, [sortType]);
+  }, [sortType, setProfiles]);
 
-  function removeProfile(id) {
-    fetch(`http://localhost:3333/profiles/${id}`, {
-      method: "DELETE",
-      headers: { "Content-Type": "application/" },
-    })
-      .then((resp) => resp.json())
-      .then(() => {
-        const removeProfile = profiles.filter((profile) => profile.id !== id);
-        setProfiles(removeProfile);
-        successToast();
-      })
-      .catch((err) => console.log(err));
+  async function removeProfile(id) {
+    const response = await api.delete(`/profiles/${id}`);
+
+    if (response.status === 200) {
+      const newArrProfile = profiles.filter((profile) => profile.id !== id);
+      setProfiles(newArrProfile);
+      return toast.success("Usuário removido com sucesso!");
+    } else {
+      return toast.error("Não foi possível remover esse usuário!");
+    }
   }
 
   return (
@@ -60,6 +53,7 @@ export default function Home() {
           {profiles.length > 0 &&
             profiles.map((profile) => (
               <Card
+                id={profile.id}
                 key={profile.id}
                 avatar={profile.avatar}
                 name={profile.name}

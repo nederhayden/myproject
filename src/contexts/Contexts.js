@@ -3,6 +3,7 @@ import React, { createContext, useState } from "react";
 export const GlobalContext = createContext();
 
 export default function ContextProvider({ children }) {
+  const [profiles, setProfiles] = useState([]);
   const [checked, setChecked] = useState(false);
   const [sortType, setSortType] = useState("name");
 
@@ -15,6 +16,8 @@ export default function ContextProvider({ children }) {
   return (
     <GlobalContext.Provider
       value={{
+        profiles,
+        setProfiles,
         checked,
         changeCheck,
         sortType,

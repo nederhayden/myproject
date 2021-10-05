@@ -15,10 +15,6 @@ export default function RegisterForm({ profileData }) {
   const [profile, setProfile] = useState(profileData || {});
   const history = useHistory();
 
-  const successToast = () => {
-    toast.success("Projeto criado com sucesso");
-  };
-
   function createPost(profile) {
     fetch("http://localhost:3333/profiles", {
       method: "POST",
@@ -29,7 +25,7 @@ export default function RegisterForm({ profileData }) {
     })
       .then((resp) => resp.json())
       .then(() => {
-        history.push("/", successToast());
+        history.push("/", toast.success("Perfil criado com sucesso"));
       })
       .catch((error) => console.log(error));
   }

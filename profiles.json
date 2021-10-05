@@ -1,29 +1,6 @@
 {
   "profiles": [
     {
-      "name": "Neder Hayden",
-      "age": "29",
-      "city": "Manaus",
-      "state": {
-        "id": "4",
-        "name": "AM"
-      },
-      "occupation": {
-        "id": "1",
-        "name": "Front-End"
-      },
-      "category": {
-        "id": "1",
-        "name": "Júnior"
-      },
-      "gender": {
-        "id": "1",
-        "name": "Masculino"
-      },
-      "avatar": "https://avatars.githubusercontent.com/u/33813497?s=400&u=cc801eec8c0f981dc7f9543c40a9f3ea7f22bd29&v=4",
-      "id": 8
-    },
-    {
       "name": "Marcos Murillo",
       "age": "25",
       "city": "Campinas",
@@ -45,75 +22,6 @@
       },
       "avatar": "https://avatars.githubusercontent.com/u/48732349?v=4",
       "id": 9
-    },
-    {
-      "name": "Meme",
-      "age": "40",
-      "city": "asfasfdasf",
-      "state": {
-        "id": "1",
-        "name": "AC"
-      },
-      "occupation": {
-        "id": "1",
-        "name": "Front-End"
-      },
-      "category": {
-        "id": "1",
-        "name": "Júnior"
-      },
-      "gender": {
-        "id": "1",
-        "name": "Masculino"
-      },
-      "avatar": "https://www.meme-arsenal.com/memes/95d51ed7bbff25ef31797ab335cd4d8a.jpg",
-      "id": 10
-    },
-    {
-      "name": "Nerd",
-      "age": "22",
-      "city": "asfasfasfa",
-      "state": {
-        "id": "1",
-        "name": "AC"
-      },
-      "occupation": {
-        "id": "1",
-        "name": "Front-End"
-      },
-      "category": {
-        "id": "1",
-        "name": "Júnior"
-      },
-      "gender": {
-        "id": "1",
-        "name": "Masculino"
-      },
-      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh3g9hPIbcOlbaCz9vibwRoRYJBSTRGpggje3rtfAidQpTVFQ-cyI1VEMPbKJ-RsubGSg&usqp=CAU",
-      "id": 11
-    },
-    {
-      "name": "Nerd",
-      "age": "33",
-      "city": "sagfasfas",
-      "state": {
-        "id": "1",
-        "name": "AC"
-      },
-      "occupation": {
-        "id": "1",
-        "name": "Front-End"
-      },
-      "category": {
-        "id": "1",
-        "name": "Júnior"
-      },
-      "gender": {
-        "id": "1",
-        "name": "Masculino"
-      },
-      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqnUXeMTypYdYlEnq-hUXsbLaExFfaAzo2aE7WMEdgNNnP8CfNVBJ0mu08Wdce2TdjhUQ&usqp=CAU",
-      "id": 12
     }
   ],
   "occupations": [

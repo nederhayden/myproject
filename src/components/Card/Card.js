@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { BsPencil, BsFillTrashFill } from "react-icons/bs";
 import styles from "./Card.module.scss";
@@ -11,7 +10,7 @@ export function Card({
   city,
   state,
   occupation,
-  handleRemove = () => {},
+  handleRemove,
 }) {
   const remove = (e) => {
     e.preventDefault();
@@ -19,7 +18,7 @@ export function Card({
   };
 
   return (
-    <div key={id} className={styles.card}>
+    <div className={styles.card}>
       <div className={styles.wrapperImg}>
         <img src={avatar} alt={`Avatar de ${name}`} />
       </div>
@@ -35,7 +34,7 @@ export function Card({
       </div>
       <button className={styles.showMore}>Detalhes</button>
       <div className={styles.projectCardActions}>
-        <Link to={`/profile/${id}`}>
+        <Link to={`/edit/${id}`}>
           <BsPencil /> Editar
         </Link>
         <button onClick={remove}>
