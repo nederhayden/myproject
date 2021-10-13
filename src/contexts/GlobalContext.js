@@ -9,6 +9,7 @@ export default function GlobalContextProvider({ children }) {
   const [checked, setChecked] = useState(false);
   const [sortType, setSortType] = useState("name");
 
+  // ================ FILTER ================
   function changeCheck(event) {
     const check = event.target.checked;
     console.log(check);
@@ -35,9 +36,7 @@ export default function GlobalContextProvider({ children }) {
     }
 
     loadProfiles(sortType);
-  }, [sortType, setProfiles]);
-
-  // ================ REGISTER FORM ================
+  }, [sortType]);
 
   // ================ CRUD ================
   async function removeProfile(id) {

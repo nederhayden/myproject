@@ -47,48 +47,70 @@
       "id": 10
     },
     {
-      "name": "asfasfas",
-      "age": "22",
-      "city": "asfasfasf",
+      "name": "Atualizacao funcionando",
+      "age": "30",
+      "city": "manaus",
       "state": {
-        "id": "1",
-        "name": "AC"
+        "id": "4",
+        "name": "AM"
       },
       "occupation": {
-        "id": "1",
-        "name": "Front-End"
+        "id": "3",
+        "name": "Fullstack"
       },
       "category": {
-        "id": "1",
-        "name": "Júnior"
-      },
-      "gender": {
-        "id": "1",
-        "name": "Masculino"
-      },
-      "id": 11
-    },
-    {
-      "name": "Arrumar reload ",
-      "age": "22",
-      "city": "adgag",
-      "state": {
-        "id": "1",
-        "name": "AC"
-      },
-      "occupation": {
-        "id": "1",
-        "name": "Front-End"
-      },
-      "category": {
-        "id": "1",
-        "name": "Júnior"
+        "id": "3",
+        "name": "Sênior"
       },
       "gender": {
         "id": "1",
         "name": "Masculino"
       },
       "id": 13
+    },
+    {
+      "name": "Corrigir Reload",
+      "age": "22",
+      "city": "asfasopifj",
+      "state": {
+        "id": "1",
+        "name": "AC"
+      },
+      "occupation": {
+        "id": "1",
+        "name": "Front-End"
+      },
+      "category": {
+        "id": "1",
+        "name": "Júnior"
+      },
+      "gender": {
+        "id": "1",
+        "name": "Masculino"
+      },
+      "id": 14
+    },
+    {
+      "name": "Teste de atualizacao",
+      "age": "22",
+      "city": "teste",
+      "state": {
+        "id": "1",
+        "name": "AC"
+      },
+      "occupation": {
+        "id": "1",
+        "name": "Front-End"
+      },
+      "category": {
+        "id": "1",
+        "name": "Júnior"
+      },
+      "gender": {
+        "id": "1",
+        "name": "Masculino"
+      },
+      "id": 15
     }
   ],
   "occupations": [
