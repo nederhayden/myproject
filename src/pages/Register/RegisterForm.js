@@ -12,6 +12,7 @@ export default function RegisterForm({ handleSubmit, btnText, profileData }) {
   const [states, setStates] = useState([]);
   const [occupations, setOccupations] = useState([]);
 
+  /*=================== BUSCA AS OPCOES DOS COMPONENTES SELECTS ===================*/
   useEffect(() => {
     async function getCategories() {
       const response = await api.get("categories");
@@ -59,19 +60,23 @@ export default function RegisterForm({ handleSubmit, btnText, profileData }) {
     getOccupations();
   }, []);
 
+  /*=================== ENVIA O FORMULARIO PARA O JSON ===================*/
   const submit = (e) => {
     e.preventDefault();
     handleSubmit(profile);
   };
 
+  /*=================== PEGA O DADO DIGITADO NO CAMPO DE NOME ===================*/
   function handleChange(e) {
     setProfile({ ...profile, [e.target.name]: e.target.value });
   }
 
+  /*=================== PEGA A URL DA IMAGEM INSERIDA NO CAMPO DE IMAGEM ===================*/
   function handleAvatar(e) {
     setProfile({ ...profile, [e.target.name]: e.target.value });
   }
 
+  /*=================== PEGA A OPCAO ESCOLHIDA NO CAMPO DE NIVEL ===================*/
   function handleCategory(e) {
     setProfile({
       ...profile,
@@ -82,6 +87,7 @@ export default function RegisterForm({ handleSubmit, btnText, profileData }) {
     });
   }
 
+  /*=================== PEGA A OPCAO ESCOLHIDA NO CAMPO DE GENERO ===================*/
   function handleGender(e) {
     setProfile({
       ...profile,
@@ -92,6 +98,7 @@ export default function RegisterForm({ handleSubmit, btnText, profileData }) {
     });
   }
 
+  /*=================== PEGA A OPCAO ESCOLHIDA NO CAMPO DE ESTADO ===================*/
   function handleStates(e) {
     setProfile({
       ...profile,
@@ -102,6 +109,7 @@ export default function RegisterForm({ handleSubmit, btnText, profileData }) {
     });
   }
 
+  /*=================== PEGA A OPCAO ESCOLHIDA NO CAMPO DE CARGO ===================*/
   function handleOccupations(e) {
     setProfile({
       ...profile,
@@ -113,6 +121,7 @@ export default function RegisterForm({ handleSubmit, btnText, profileData }) {
   }
 
   return (
+    /*=================== FORMULARIO ===================*/
     <form className={styles.form} onSubmit={submit}>
       <div>
         <span>
@@ -122,6 +131,7 @@ export default function RegisterForm({ handleSubmit, btnText, profileData }) {
             name="name"
             placeholder="Digite seu nome completo"
             handleOnChange={handleChange}
+            /*=================== VALOR QUE SERA ENVIADO PARA O JSON ===================*/
             value={profile.name ? profile.name : ""}
           />
           <Input

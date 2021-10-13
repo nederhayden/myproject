@@ -8,8 +8,11 @@ import styles from "./NewRegister.module.scss";
 
 export default function NewRegister() {
   const [profiles, setProfiles] = useState();
+
+  /*=================== USADO PARA LEVAR O USUARIO PARA OUTRA ROTA ===================*/
   const history = useHistory();
 
+  /*=================== CRIA UM NOVO PERFIL ===================*/
   async function createPost(profile) {
     const params = JSON.stringify(profile);
     const response = await api.post("/profiles", params, {

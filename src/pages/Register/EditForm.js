@@ -12,7 +12,7 @@ export default function EditForm() {
   const [profile, setProfile] = useState([]);
   const history = useHistory();
 
-  // ===================== GET ID PROFILE =====================
+  /*=================== SELECIONA O PERFIL ESCOLHIDO PARA SER EDITADO ===================*/
   useEffect(() => {
     async function getProfileEdit() {
       const response = await api.get(`/profiles/${id}`, {
@@ -26,6 +26,7 @@ export default function EditForm() {
     getProfileEdit();
   }, [id]);
 
+  /*=================== EDITA O PERFIL ESCOLHIDO ===================*/
   async function editPost(profile) {
     const params = JSON.stringify(profile);
     const response = await api.patch(`/profiles/${id}`, params, {
