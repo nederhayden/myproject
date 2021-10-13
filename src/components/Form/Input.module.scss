@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .formControl {
   display: flex;
   flex-direction: column;
@@ -16,5 +18,9 @@
 
   input::placeholder {
     color: #7b7b7b;
+  }
+
+  input:focus {
+    border: 3px solid $blue;
   }
 }

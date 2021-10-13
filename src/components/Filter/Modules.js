@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { GlobalContext } from "../../contexts/Contexts";
+import { GlobalContext } from "../../contexts/GlobalContext";
 import { Checkbox } from "./Checkbox";
 import styles from "./Modules.module.scss";
 

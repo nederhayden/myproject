@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { GlobalContext } from "../../contexts/Contexts";
+import { GlobalContext } from "../../contexts/GlobalContext";
 import styles from "./OrderProfiles.module.scss";
 
 export default function OrderProfiles() {

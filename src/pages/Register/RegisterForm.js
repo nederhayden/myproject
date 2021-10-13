@@ -1,36 +1,16 @@
 import { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
-import { toast } from "react-toastify";
 import api from "../../services/api";
 import SubmitButton from "../../components/Form/SubmitButton";
 import Input from "../../components/Form/Input";
 import Select from "../../components/Form/Select";
 import styles from "./RegisterForm.module.scss";
 
-export default function RegisterForm({ profileData }) {
+export default function RegisterForm({ handleSubmit, btnText, profileData }) {
+  const [profile, setProfile] = useState(profileData || {});
   const [categories, setCategories] = useState([]);
   const [genders, setGenders] = useState([]);
   const [states, setStates] = useState([]);
   const [occupations, setOccupations] = useState([]);
-  const [profile, setProfile] = useState(profileData || {});
-  const history = useHistory();
-
-  async function createPost(profile) {
-    const params = JSON.stringify(profile);
-    const response = await api.post("/profiles", params, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-
-    if (response.status === 201) {
-      return history.push("/", toast.success("Perfil criado com sucesso"));
-    } else {
-      return toast.error(
-        "Não foi possível criar esse perfil. Tente novamente!"
-      );
-    }
-  }
 
   useEffect(() => {
     async function getCategories() {
@@ -81,7 +61,7 @@ export default function RegisterForm({ profileData }) {
 
   const submit = (e) => {
     e.preventDefault();
-    createPost(profile);
+    handleSubmit(profile);
   };
 
   function handleChange(e) {
@@ -133,90 +113,85 @@ export default function RegisterForm({ profileData }) {
   }
 
   return (
-    <div className={styles.Container}>
-      <div className={styles.formContainer}>
-        <form className={styles.form} onSubmit={submit}>
-          <h1>Novo Cadastro</h1>
-          <div>
-            <span>
-              <Input
-                type="text"
-                text="Nome"
-                name="name"
-                placeholder="Digite seu nome completo"
-                handleOnChange={handleChange}
-                value={profile.name ? profile.name : ""}
-              />
-              <Input
-                type="number"
-                text="Idade"
-                name="age"
-                placeholder="Informe sua idade"
-                handleOnChange={handleChange}
-                value={profile.age ? profile.age : ""}
-              />
-            </span>
-          </div>
-
-          <div>
-            <Input
-              type="text"
-              text="Cidade"
-              name="city"
-              placeholder="Informe sua cidade e estado"
-              handleOnChange={handleChange}
-              value={profile.city ? profile.city : ""}
-            />
-          </div>
-
-          <Select
-            name="stateId"
-            text="Estado"
-            options={states}
-            handleOnChange={handleStates}
-            value={profile.state ? profile.state.id : ""}
+    <form className={styles.form} onSubmit={submit}>
+      <div>
+        <span>
+          <Input
+            type="text"
+            text="Nome"
+            name="name"
+            placeholder="Digite seu nome completo"
+            handleOnChange={handleChange}
+            value={profile.name ? profile.name : ""}
           />
-
-          <Select
-            name="occupationId"
-            text="Cargo"
-            options={occupations}
-            handleOnChange={handleOccupations}
-            value={profile.occupation ? profile.occupation.id : ""}
+          <Input
+            type="number"
+            text="Idade"
+            name="age"
+            placeholder="Informe sua idade"
+            handleOnChange={handleChange}
+            value={profile.age ? profile.age : ""}
           />
-
-          <Select
-            name="categoryId"
-            text="Nível"
-            options={categories}
-            handleOnChange={handleCategory}
-            value={profile.category ? profile.category.id : ""}
-          />
-
-          <Select
-            name="genderId"
-            text="Gênero"
-            options={genders}
-            handleOnChange={handleGender}
-            value={profile.gender ? profile.gender.id : ""}
-          />
-
-          {/* <Upload handleOnChange={handleAvatar} /> */}
-          <div>
-            <Input
-              type="url"
-              text="Imagem"
-              name="avatar"
-              placeholder="https://example.com"
-              pattern="https://.*"
-              handleOnChange={handleAvatar}
-              // value={profile.avatar ? profile.avatar : ""}
-            />
-          </div>
-
-          <SubmitButton text="Enviar Cadastro" />
-        </form>
+        </span>
       </div>
-    </div>
+
+      <div>
+        <Input
+          type="text"
+          text="Cidade"
+          name="city"
+          placeholder="Informe sua cidade e estado"
+          handleOnChange={handleChange}
+          value={profile.city ? profile.city : ""}
+        />
+      </div>
+
+      <Select
+        name="stateId"
+        text="Estado"
+        options={states}
+        handleOnChange={handleStates}
+        value={profile.state ? profile.state.id : ""}
+      />
+
+      <Select
+        name="occupationId"
+        text="Cargo"
+        options={occupations}
+        handleOnChange={handleOccupations}
+        value={profile.occupation ? profile.occupation.id : ""}
+      />
+
+      <Select
+        name="categoryId"
+        text="Nível"
+        options={categories}
+        handleOnChange={handleCategory}
+        value={profile.category ? profile.category.id : ""}
+      />
+
+      <Select
+        name="genderId"
+        text="Gênero"
+        options={genders}
+        handleOnChange={handleGender}
+        value={profile.gender ? profile.gender.id : ""}
+      />
+
+      {/* <Upload handleOnChange={handleAvatar} /> */}
+      <div>
+        <Input
+          type="url"
+          text="Imagem"
+          name="avatar"
+          placeholder="https://example.com"
+          pattern="https://.*"
+          handleOnChange={handleAvatar}
+          // value={profile.avatar ? profile.avatar : ""}
+        />
+      </div>
+
+      <SubmitButton text={btnText} />
+    </form>
   );
 }

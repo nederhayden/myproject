@@ -12,7 +12,7 @@ export default function Header() {
           <img src={logo} alt="Logo" />
         </Link>
         <Link to="/">
-          <strong>Developers</strong>
+          <strong>Desenvolvedores</strong>
         </Link>
       </div>
       <div className={styles.menuSection}>
