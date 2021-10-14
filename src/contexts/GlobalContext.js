@@ -38,7 +38,7 @@ export default function GlobalContextProvider({ children }) {
     loadProfiles(sortType);
   }, [sortType]);
 
-  // ================ CRUD ================
+  // ================ REMOVE UM PERFIL ================
   async function removeProfile(id) {
     const response = await api.delete(`/profiles/${id}`);
 

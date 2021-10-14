@@ -20,15 +20,15 @@ export default function EditForm() {
           "Content-Type": "application/json",
         },
       });
-      setProfile(response);
+      setProfile(response.data);
     }
 
     getProfileEdit();
   }, [id]);
 
   /*=================== EDITA O PERFIL ESCOLHIDO ===================*/
-  async function editPost(profile) {
-    const params = JSON.stringify(profile);
+  async function editPost(profileEdit) {
+    const params = JSON.stringify(profileEdit);
     const response = await api.patch(`/profiles/${id}`, params, {
       headers: {
         "Content-Type": "application/json",
@@ -41,18 +41,20 @@ export default function EditForm() {
 
   return (
     <>
-      {profile && (
-        <div className={styles.Container}>
-          <div className={styles.formContainer}>
-            <h1>Perfil {profile.name}</h1>
-            <RegisterForm
-              handleSubmit={editPost}
-              btnText="Concluir edição"
-              profileData={profile}
-            />
-          </div>
+      <div className={styles.Container}>
+        <div className={styles.formContainer}>
+          <h1>
+            {profile.name
+              ? `Perfil de ${profile.name}`
+              : "Não foi possível identificar o nome"}
+          </h1>
+          <RegisterForm
+            handleSubmit={editPost}
+            btnText="Concluir edição"
+            profileData={profile}
+          />
         </div>
-      )}
+      </div>
     </>
   );
 }
