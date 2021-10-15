@@ -8,14 +8,16 @@ import styles from "./EditForm.module.scss";
 
 export default function EditForm() {
   const { id } = useParams();
-  const [profile, setProfile] = useState([]);
+  const [profile, setProfile] = useState({});
   const history = useHistory();
 
-  /*=================== SELECIONA O PERFIL ESCOLHIDO PARA SER EDITADO ===================*/
+  /*=================== CARREGA O PERFIL ESCOLHIDO PARA SER EDITADO ===================*/
   useEffect(() => {
     async function getProfileEdit() {
       const response = await api.get(`/profiles/${id}`);
+
       setProfile(response.data);
+      // console.log(profile);
     }
 
     getProfileEdit();
@@ -27,12 +29,13 @@ export default function EditForm() {
     const response = await api.patch(`/profiles/${id}`, params);
 
     setProfile(response);
+
     history.push("/", toast.success("Perfil atualizado com sucesso"));
   }
 
   return (
     <>
-      {profile.name && (
+      {Object.keys(profile).length && (
         <div className={styles.Container}>
           <div className={styles.formContainer}>
             <h1>Perfil de {profile.name}</h1>

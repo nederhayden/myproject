@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState } from "react";
 import api from "../services/api";
 import { toast } from "react-toastify";
 
@@ -17,26 +17,6 @@ export default function GlobalContextProvider({ children }) {
   }
 
   // ================ HOME ================
-  useEffect(() => {
-    async function loadProfiles(type) {
-      const response = await api.get("profiles");
-      const types = {
-        name: "name",
-        age: "age",
-      };
-      const sortProperty = types[type];
-
-      const data = response.data
-        .sort((a, b) => (a[sortProperty] < b[sortProperty] ? -1 : 1))
-        .map((profile) => ({
-          ...profile,
-        }));
-
-      setProfiles(data);
-    }
-
-    loadProfiles(sortType);
-  }, [sortType]);
 
   // ================ REMOVE UM PERFIL ================
   async function removeProfile(id) {

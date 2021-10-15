@@ -47,28 +47,6 @@
       "id": 10
     },
     {
-      "name": "Corrigir Reload",
-      "age": "22",
-      "city": "asfasopifj",
-      "state": {
-        "id": "1",
-        "name": "AC"
-      },
-      "occupation": {
-        "id": "1",
-        "name": "Front-End"
-      },
-      "category": {
-        "id": "1",
-        "name": "Júnior"
-      },
-      "gender": {
-        "id": "1",
-        "name": "Masculino"
-      },
-      "id": 14
-    },
-    {
       "name": "Fernanda",
       "age": "32",
       "city": "sdgasdg",
@@ -161,30 +139,8 @@
         "maxContentLength": -1,
         "maxBodyLength": -1
       },
-      "request": {}
-    },
-    {
-      "name": "Patricia",
-      "age": "34",
-      "city": "asfgasgasg",
-      "state": {
-        "id": "1",
-        "name": "AC"
-      },
-      "occupation": {
-        "id": "1",
-        "name": "Front-End"
-      },
-      "category": {
-        "id": "1",
-        "name": "Júnior"
-      },
-      "gender": {
-        "id": "1",
-        "name": "Masculino"
-      },
-      "id": 17,
-      "{\"name\":\"Patricia\",\"age\":\"34\",\"city\":\"asfgasgasg\",\"state\":{\"id\":\"1\",\"name\":\"AC\"},\"occupation\":{\"id\":\"1\",\"name\":\"Front-End\"},\"category\":{\"id\":\"1\",\"name\":\"Júnior\"},\"gender\":{\"id\":\"1\",\"name\":\"Masculino\"},\"id\":17,\"avatar\":\"https://image.freepik.com/vetores-gratis/perfil-de-avatar-de-mulher-no-icone-redondo_24640-14047.jpg\"}": ""
+      "request": {},
+      "{\"name\":\"Bruna\",\"age\":\"33\",\"city\":\"asasggf\",\"state\":{\"id\":\"1\",\"name\":\"AC\"},\"occupation\":{\"id\":\"1\",\"name\":\"Front-End\"},\"category\":{\"id\":\"1\",\"name\":\"Júnior\"},\"gender\":{\"id\":\"2\",\"name\":\"Feminino\"},\"id\":16,\"data\":{\"name\":\"Teste\",\"age\":\"26\",\"city\":\"okpokpokp\",\"state\":{\"id\":\"1\",\"name\":\"AC\"},\"occupation\":{\"id\":\"1\",\"name\":\"Front-End\"},\"category\":{\"id\":\"1\",\"name\":\"Júnior\"},\"gender\":{\"id\":\"1\",\"name\":\"Masculino\"},\"id\":16},\"status\":200,\"statusText\":\"OK\",\"headers\":{\"cache-control\":\"no-cache\",\"content-length\":\"299\",\"content-type\":\"application/json; charset": "utf-8\",\"expires\":\"-1\",\"pragma\":\"no-cache\"},\"config\":{\"url\":\"/profiles/16\",\"method\":\"get\",\"headers\":{\"Accept\":\"application/json, text/plain, */*\"},\"baseURL\":\"http://localhost:3333\",\"transformRequest\":[null],\"transformResponse\":[null],\"timeout\":0,\"xsrfCookieName\":\"XSRF-TOKEN\",\"xsrfHeaderName\":\"X-XSRF-TOKEN\",\"maxContentLength\":-1,\"maxBodyLength\":-1},\"request\":{}}"
     }
   ],
   "occupations": [

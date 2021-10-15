@@ -1,5 +1,6 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { GlobalContext } from "../../contexts/GlobalContext";
+import api from "../../services/api";
 import { Card } from "../../components/Card/Card";
 import { Filter } from "../../components/Filter/Filter";
 import OrderProfiles from "../../components/Filter/OrderProfiles";
@@ -8,7 +9,29 @@ import styles from "./Home.module.scss";
 
 export default function Home() {
   /*=================== USA O ESTADO GLOBAL DA APLICACAO ===================*/
-  const { profiles, removeProfile } = useContext(GlobalContext);
+  const { profiles, setProfiles, sortType, removeProfile } =
+    useContext(GlobalContext);
+
+  useEffect(() => {
+    async function loadProfiles(type) {
+      const response = await api.get("profiles");
+      const types = {
+        name: "name",
+        age: "age",
+      };
+      const sortProperty = types[type];
+
+      const data = response.data
+        .sort((a, b) => (a[sortProperty] < b[sortProperty] ? -1 : 1))
+        .map((profile) => ({
+          ...profile,
+        }));
+
+      setProfiles(data);
+    }
+
+    loadProfiles(sortType);
+  }, [sortType, setProfiles]);
 
   return (
     <div className={styles.home}>

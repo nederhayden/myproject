@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+// import GlobalContext from "../../contexts/GlobalContext";
 import api from "../../services/api";
 import { toast } from "react-toastify";
 import RegisterForm from "./RegisterForm";
