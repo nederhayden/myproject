@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import api from "../../services/api";
-// import GlobalContext from "../../contexts/GlobalContext";
 import RegisterForm from "./RegisterForm";
 import { toast } from "react-toastify";
 
@@ -15,11 +14,7 @@ export default function EditForm() {
   /*=================== SELECIONA O PERFIL ESCOLHIDO PARA SER EDITADO ===================*/
   useEffect(() => {
     async function getProfileEdit() {
-      const response = await api.get(`/profiles/${id}`, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await api.get(`/profiles/${id}`);
       setProfile(response.data);
     }
 
@@ -29,11 +24,7 @@ export default function EditForm() {
   /*=================== EDITA O PERFIL ESCOLHIDO ===================*/
   async function editPost(profileEdit) {
     const params = JSON.stringify(profileEdit);
-    const response = await api.patch(`/profiles/${id}`, params, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await api.patch(`/profiles/${id}`, params);
 
     setProfile(response);
     history.push("/", toast.success("Perfil atualizado com sucesso"));
@@ -41,20 +32,18 @@ export default function EditForm() {
 
   return (
     <>
-      <div className={styles.Container}>
-        <div className={styles.formContainer}>
-          <h1>
-            {profile.name
-              ? `Perfil de ${profile.name}`
-              : "Não foi possível identificar o nome"}
-          </h1>
-          <RegisterForm
-            handleSubmit={editPost}
-            btnText="Concluir edição"
-            profileData={profile}
-          />
+      {profile.name && (
+        <div className={styles.Container}>
+          <div className={styles.formContainer}>
+            <h1>Perfil de {profile.name}</h1>
+            <RegisterForm
+              handleSubmit={editPost}
+              btnText="Concluir edição"
+              profileData={profile}
+            />
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 }

@@ -197,7 +197,7 @@ export default function RegisterForm({ handleSubmit, btnText, profileData }) {
           placeholder="https://example.com"
           pattern="https://.*"
           handleOnChange={handleAvatar}
-          // value={profile.avatar ? profile.avatar : ""}
+          value={profile.avatar ? profile.avatar : ""}
         />
       </div>
 

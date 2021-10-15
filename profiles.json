@@ -162,6 +162,29 @@
         "maxBodyLength": -1
       },
       "request": {}
+    },
+    {
+      "name": "Patricia",
+      "age": "34",
+      "city": "asfgasgasg",
+      "state": {
+        "id": "1",
+        "name": "AC"
+      },
+      "occupation": {
+        "id": "1",
+        "name": "Front-End"
+      },
+      "category": {
+        "id": "1",
+        "name": "Júnior"
+      },
+      "gender": {
+        "id": "1",
+        "name": "Masculino"
+      },
+      "id": 17,
+      "{\"name\":\"Patricia\",\"age\":\"34\",\"city\":\"asfgasgasg\",\"state\":{\"id\":\"1\",\"name\":\"AC\"},\"occupation\":{\"id\":\"1\",\"name\":\"Front-End\"},\"category\":{\"id\":\"1\",\"name\":\"Júnior\"},\"gender\":{\"id\":\"1\",\"name\":\"Masculino\"},\"id\":17,\"avatar\":\"https://image.freepik.com/vetores-gratis/perfil-de-avatar-de-mulher-no-icone-redondo_24640-14047.jpg\"}": ""
     }
   ],
   "occupations": [
