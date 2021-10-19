@@ -26,7 +26,11 @@ export default function EditForm() {
   /*=================== EDITA O PERFIL ESCOLHIDO ===================*/
   async function editPost(profileEdit) {
     const params = JSON.stringify(profileEdit);
-    const response = await api.patch(`/profiles/${id}`, params);
+    const response = await api.patch(`/profiles/${id}`, params, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
     setProfile(response);
 
