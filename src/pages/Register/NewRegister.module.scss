@@ -1,19 +1,1 @@
 @import "../../styles/variables.scss";
-
-.Container {
-  display: flex;
-  justify-content: center;
-
-  h1 {
-    display: flex;
-    justify-content: center;
-    margin: 1rem;
-  }
-}
-
-.formContainer {
-  border: 1px solid $blue;
-  border-radius: 4px;
-  box-shadow: $shadow;
-  background: $background-Container;
-}

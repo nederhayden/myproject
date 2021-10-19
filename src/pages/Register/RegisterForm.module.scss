@@ -1,18 +1,1 @@
 @import "../../styles/variables.scss";
-
-.form {
-  width: 450px;
-  display: flex;
-  flex-direction: column;
-  align-items: center baseline;
-  margin: 0 3rem 3rem 3rem;
-
-  h1 {
-    margin-bottom: 2rem;
-  }
-
-  button {
-    margin-top: 2rem;
-    width: 100%;
-  }
-}

@@ -1,16 +1,11 @@
-.home {
-  display: flex;
-}
+@import "../../styles/variables.scss";
 
-.homeProfiles {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
+.home {
+  background-color: $bg-App2;
+  margin: 1em 1em;
 }
 
 .profiles {
   display: grid;
-  grid-template-columns: repeat(5, 240px);
-  grid-gap: 20px;
-  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
 }

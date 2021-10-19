@@ -3,20 +3,11 @@
 * {
   margin: 0;
   padding: 0;
-  outline: none;
   box-sizing: border-box;
+  font-family: Helvetica;
 }
 
-body {
-  background: no-repeat $background-App;
-  background-position: center;
-  background-image: url("../assets/undraw_react_y7wq.svg");
+a {
+  text-decoration: none;
   color: $white;
-  font-family: "Times New Roman", Times, serif;
-}
-
-a,
-button {
-  cursor: pointer;
-  font-family: "Times New Roman", Times, serif;
 }

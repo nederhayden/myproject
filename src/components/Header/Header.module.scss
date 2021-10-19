@@ -2,171 +2,26 @@
 
 .header {
   display: flex;
-  margin: 1.2em;
-  justify-content: space-between;
-  border: 1px solid $blue;
-  border-radius: 8px;
-  padding: 10px 40px;
   align-items: center;
-  background: $background-Container;
-  box-shadow: 0 0 1em $blue;
-  overflow: hidden;
+  justify-content: space-between;
+  background-color: $bg-App;
+  padding: 1em 2em;
+}
 
-  .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.logo {
+  display: flex;
+  align-items: center;
 
-    img {
-      height: 60px;
-
-      &:hover {
-        -webkit-animation: spin 4s linear infinite;
-        -moz-animation: spin 4s linear infinite;
-        animation: spin 4s linear infinite;
-        @-moz-keyframes spin {
-          100% {
-            -moz-transform: rotate(360deg);
-          }
-        }
-        @-webkit-keyframes spin {
-          100% {
-            -webkit-transform: rotate(360deg);
-          }
-        }
-        @keyframes spin {
-          100% {
-            -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-          }
-        }
-      }
-    }
-
-    a {
-      text-decoration: none;
-      color: $white;
-    }
-
-    strong {
-      margin-left: 20px;
-      font-size: 2.2rem;
-    }
+  img {
+    height: 6em;
   }
 
-  .registerDev {
-    display: flex;
-    padding: 20px;
-
-    a {
-      text-decoration: none;
-      color: $white;
-      margin-left: 20px;
-      font-size: 1.4rem;
-      font-weight: bold;
-      margin-right: 26px;
-
-      &:hover {
-        text-shadow: 1px 1px 0 lighten($blue, 15%);
-        color: $blue;
-      }
-    }
+  p {
+    font-size: 2em;
+    padding: 0 0 0 0.6em;
   }
 }
-/* ============================= RESPONSIVIDADE ============================= */
-/* Esconde a class login */
-// @media (max-width: 830px) {
-//   .header .login {
-//     display: none;
-//   }
 
-//   .one,
-//   .two,
-//   .three {
-//     background-color: $white;
-//     height: 5px;
-//     width: 100%;
-//     margin: 6px auto;
-//   }
-
-//   .menuToggle {
-//     width: 40px;
-//     height: 30px;
-//   }
-
-//   /* Menu Aberto */
-//   .menuSection.on {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     background-color: $background-App;
-//     width: 100vw;
-//     height: 100vh;
-//     z-index: 10;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//   }
-
-//   /* Faz aparecer novamente a classe login */
-//   .menuSection.on .login {
-//     display: block;
-//   }
-
-//   /* Move o menu para o canto direito */
-//   .menuSection.on .menuToggle {
-//     position: absolute;
-//     right: 60px;
-//     top: 45px;
-//   }
-
-//   /* Transforma o menuToggle em um "X" */
-//   .menuSection.on .menuToggle .one {
-//     transform: rotate(45deg) translate(7px, 7px);
-//   }
-
-//   .menuSection.on .menuToggle .two {
-//     opacity: 0;
-//   }
-
-//   .menuSection.on .menuToggle .three {
-//     transform: rotate(-45deg) translate(8px, -9px);
-//   }
-
-//   .menuSection.on ul {
-//     text-align: center;
-//     display: flex;
-//     flex-direction: column;
-//   }
-
-//   .menuSection.on ul a {
-//     transition-duration: 0.5s;
-//     line-height: 8rem;
-//     font-size: 3rem;
-//   }
-// }
-
-// @media (max-width: 450px) {
-//   .header .logo {
-//     img {
-//       height: 40px;
-//     }
-
-//     strong {
-//       font-size: 1.8rem;
-//     }
-//   }
-// }
-
-// @media (max-width: 380px) {
-//   .header .logo {
-//     display: block;
-//     img {
-//       height: 25px;
-//     }
-
-//     strong {
-//       font-size: 1.4rem;
-//     }
-//   }
-// }
+.registerDev {
+  font-size: 2em;
+}
