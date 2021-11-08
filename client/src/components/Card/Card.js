@@ -4,7 +4,7 @@ import styles from "./Card.module.scss";
 
 export function Card({
   id,
-  avatar,
+  image,
   name,
   age,
   city,
@@ -20,7 +20,7 @@ export function Card({
   return (
     <div className={styles.card}>
       <div className={styles.wrapperImg}>
-        <img src={avatar} alt={`Avatar de ${name}`} />
+        <img src={image} alt={`Avatar de ${name}`} />
       </div>
       <div className={styles.personalDetails}>
         <strong>{name}</strong>

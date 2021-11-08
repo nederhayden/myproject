@@ -47,7 +47,7 @@ export default function Home() {
               <Card
                 id={profile.id}
                 key={profile.id}
-                avatar={profile.avatar}
+                image={profile.image}
                 name={profile.name}
                 age={profile.age}
                 city={profile.city}

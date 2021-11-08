@@ -3,7 +3,11 @@ import api from "../../services/api";
 import SubmitButton from "../../components/Form/SubmitButton";
 import Input from "../../components/Form/Input";
 import Select from "../../components/Form/Select";
+// import Dropzone from "../../components/Form/Dropzone";
+
 import styles from "./RegisterForm.module.scss";
+import Upload from "../../components/Upload/Upload";
+import FileImage from "../../components/FileImage/FileImage";
 
 export default function RegisterForm({ handleSubmit, btnText, profileData }) {
   const [profile, setProfile] = useState(profileData || {});
@@ -72,9 +76,12 @@ export default function RegisterForm({ handleSubmit, btnText, profileData }) {
   }
 
   /*=================== PEGA A URL DA IMAGEM INSERIDA NO CAMPO DE IMAGEM ===================*/
-  function handleAvatar(e) {
-    setProfile({ ...profile, [e.target.name]: e.target.value });
-  }
+  /* function handleAvatar(image) {
+    setProfile({
+      ...profile,
+      image,
+    });
+  } */
 
   /*=================== PEGA A OPCAO ESCOLHIDA NO CAMPO DE NIVEL ===================*/
   function handleCategory(e) {
@@ -188,8 +195,11 @@ export default function RegisterForm({ handleSubmit, btnText, profileData }) {
         value={profile.gender ? profile.gender.id : ""}
       />
 
-      {/* <Upload handleOnChange={handleAvatar} /> */}
-      <div>
+      <Upload />
+      <FileImage />
+
+      {/* <Dropzone handleAvatarDrop={handleAvatar} /> */}
+      {/* <div>
         <Input
           type="url"
           text="Imagem"
@@ -199,7 +209,7 @@ export default function RegisterForm({ handleSubmit, btnText, profileData }) {
           handleOnChange={handleAvatar}
           value={profile.avatar ? profile.avatar : ""}
         />
-      </div>
+      </div> */}
 
       <SubmitButton text={btnText} />
     </form>

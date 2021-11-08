@@ -39,7 +39,7 @@ export default function EditForm() {
 
   return (
     <>
-      {Object.keys(profile).length && (
+      {"name" in profile && (
         <div className={styles.Container}>
           <div className={styles.formContainer}>
             <h1>Perfil de {profile.name}</h1>

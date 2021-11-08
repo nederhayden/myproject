@@ -1,0 +1,19 @@
+@import "../../styles/variables.scss";
+
+.dropContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed $blue;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: height 0.2s ease;
+}
+
+p {
+  padding: 1rem 1rem;
+}
+
+span {
+  padding: 0 1rem;
+}

@@ -1,6 +1,7 @@
 import styles from "./Input.module.scss";
 
 export default function Input({
+  defaultValue,
   type,
   text,
   name,
@@ -13,6 +14,7 @@ export default function Input({
     <div className={styles.formControl}>
       <label htmlFor={name}>{text}:</label>
       <input
+        defaultValue={defaultValue}
         type={type}
         name={name}
         id={name}
