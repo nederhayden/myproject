@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { default as MainDropzone } from "react-dropzone";
+import { Box } from "@material-ui/core";
 import BackupIcon from "@material-ui/icons/Backup";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import ErrorIcon from "@material-ui/icons/Error";
@@ -76,7 +77,7 @@ export default function Dropzone({
       {files.length === 0 && (
         <MainDropzone onDrop={handleOnDrop} {...props}>
           {({ getRootProps, getInputProps }) => (
-            <div className={styles.dropContainer} {...getRootProps()}>
+            <Box className={styles.dropContainer} {...getRootProps()}>
               <BackupIcon />
               <input {...getInputProps()} />
               <p>Arraste aqui o arquivo ou clique para selecionar</p>
@@ -93,18 +94,18 @@ export default function Dropzone({
                   arquivo. Por favor, tente novamente.
                 </p>
               )}
-            </div>
+            </Box>
           )}
         </MainDropzone>
       )}
       {files && files.length > 0 ? (
         <>
           {files.map((file, index) => (
-            <div key={index} className={styles.dropContainer}>
+            <Box key={index} className={styles.dropContainer}>
               <span>{file.path}</span>
               <span>{handleConvertSizeFile(file.size)}</span>
               <DeleteForever onClick={() => handleRemoveFile(index)} />
-            </div>
+            </Box>
           ))}
         </>
       ) : (

@@ -6,6 +6,7 @@
   border: 1px solid $blue;
   border-radius: 8px;
   background: $background-Container;
+  color: $white;
 
   height: 22rem;
   width: 15rem;
@@ -48,7 +49,7 @@
 
     strong {
       padding-bottom: 2px;
-      font-size: 1.4rem;
+      font-size: 1.4em;
     }
 
     span {
@@ -58,6 +59,7 @@
   }
 
   .showMore {
+    text-transform: none;
     margin: 0 0.6rem;
     height: 1.6rem;
     overflow: hidden;

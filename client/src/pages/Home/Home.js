@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import { GlobalContext } from "../../contexts/GlobalContext";
 import api from "../../services/api";
-import { Card } from "../../components/Card/Card";
+import { CardProfile } from "../../components/Card/CardProfile";
 import { Filter } from "../../components/Filter/Filter";
 import OrderProfiles from "../../components/Filter/OrderProfiles";
 
@@ -44,7 +44,7 @@ export default function Home() {
           {profiles.length > 0 &&
             profiles.map((profile) => (
               /*=================== RENDERIZA OS PERFIS NO FORMATO DO COMPONENTE CARD ===================*/
-              <Card
+              <CardProfile
                 id={profile.id}
                 key={profile.id}
                 image={profile.image}

@@ -1,7 +1,7 @@
 import { useFiles } from "../../contexts/GlobalContext";
 import { Container, FileInfo, Preview } from "./styles";
 import { CircularProgressbar } from "react-circular-progressbar";
-import { MdCheckCircle, MdError, MdLink, MdMoodBad } from "react-icons/md";
+import { MdCheckCircle, MdError, MdLink } from "react-icons/md";
 
 const FileImage = () => {
   const { uploadedFile: files, deleteFile } = useFiles();

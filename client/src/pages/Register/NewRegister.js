@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 // import GlobalContext from "../../contexts/GlobalContext";
 import api from "../../services/api";
+import { Box } from "@material-ui/core";
 import { toast } from "react-toastify";
 import RegisterForm from "./RegisterForm";
 
@@ -33,11 +34,11 @@ export default function NewRegister() {
   }
 
   return (
-    <div className={styles.Container}>
-      <div className={styles.formContainer}>
+    <Box className={styles.Container}>
+      <Box className={styles.formContainer}>
         <h1>Novo Perfil</h1>
         <RegisterForm handleSubmit={createPost} btnText="Criar Perfil" />
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 }

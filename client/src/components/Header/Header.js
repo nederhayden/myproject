@@ -1,4 +1,5 @@
 import React from "react";
+import { Box } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 import logo from "../../assets/logo.png";
@@ -6,27 +7,20 @@ import styles from "./Header.module.scss";
 
 export default function Header() {
   return (
-    <div className={styles.header}>
-      <div className={styles.logo}>
+    <Box className={styles.header}>
+      <Box className={styles.logo}>
         <Link to="/">
           <img src={logo} alt="Logo" />
         </Link>
         <Link to="/">
           <strong>Desenvolvedores</strong>
         </Link>
-      </div>
-      <div className={styles.menuSection}>
-        <div className={styles.menuToggle}>
-          <div className={styles.one}></div>
-          <div className={styles.two}></div>
-          <div className={styles.three}></div>
-        </div>
-        <div className={styles.registerDev}>
-          <ul>
-            <Link to="/register">Cadastrar Dev</Link>
-          </ul>
-        </div>
-      </div>
-    </div>
+      </Box>
+      <Box className={styles.registerDev}>
+        <ul>
+          <Link to="/register">Cadastrar Dev</Link>
+        </ul>
+      </Box>
+    </Box>
   );
 }

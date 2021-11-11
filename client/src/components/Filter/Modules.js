@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../contexts/GlobalContext";
+import { Box } from "@material-ui/core";
 import { Checkbox } from "./Checkbox";
 import styles from "./Modules.module.scss";
 
@@ -10,7 +11,7 @@ export function Genero() {
   return (
     <details className={styles.genero}>
       <summary className={styles.title}>Gênero</summary>
-      <div className={styles.options}>
+      <Box className={styles.options}>
         <label>
           <Checkbox
             value="Masculino"
@@ -44,7 +45,7 @@ export function Genero() {
             }}
           />
         </label>
-      </div>
+      </Box>
     </details>
   );
 }

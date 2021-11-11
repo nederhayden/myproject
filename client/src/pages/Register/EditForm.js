@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import api from "../../services/api";
 import RegisterForm from "./RegisterForm";
+import { Box } from "@material-ui/core";
 import { toast } from "react-toastify";
 
 import styles from "./EditForm.module.scss";
@@ -40,16 +41,16 @@ export default function EditForm() {
   return (
     <>
       {"name" in profile && (
-        <div className={styles.Container}>
-          <div className={styles.formContainer}>
+        <Box className={styles.Container}>
+          <Box className={styles.formContainer}>
             <h1>Perfil de {profile.name}</h1>
             <RegisterForm
               handleSubmit={editPost}
               btnText="Concluir edição"
               profileData={profile}
             />
-          </div>
-        </div>
+          </Box>
+        </Box>
       )}
     </>
   );

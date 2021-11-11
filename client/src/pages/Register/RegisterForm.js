@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import api from "../../services/api";
+import { Box } from "@material-ui/core";
 import SubmitButton from "../../components/Form/SubmitButton";
 import Input from "../../components/Form/Input";
 import Select from "../../components/Form/Select";
@@ -130,7 +131,7 @@ export default function RegisterForm({ handleSubmit, btnText, profileData }) {
   return (
     /*=================== FORMULARIO ===================*/
     <form className={styles.form} onSubmit={submit}>
-      <div>
+      <Box>
         <span>
           <Input
             type="text"
@@ -150,9 +151,9 @@ export default function RegisterForm({ handleSubmit, btnText, profileData }) {
             value={profile.age ? profile.age : ""}
           />
         </span>
-      </div>
+      </Box>
 
-      <div>
+      <Box>
         <Input
           type="text"
           text="Cidade"
@@ -161,7 +162,7 @@ export default function RegisterForm({ handleSubmit, btnText, profileData }) {
           handleOnChange={handleChange}
           value={profile.city ? profile.city : ""}
         />
-      </div>
+      </Box>
 
       <Select
         name="stateId"
@@ -199,7 +200,7 @@ export default function RegisterForm({ handleSubmit, btnText, profileData }) {
       <FileImage />
 
       {/* <Dropzone handleAvatarDrop={handleAvatar} /> */}
-      {/* <div>
+      {/* <Box>
         <Input
           type="url"
           text="Imagem"
@@ -209,7 +210,7 @@ export default function RegisterForm({ handleSubmit, btnText, profileData }) {
           handleOnChange={handleAvatar}
           value={profile.avatar ? profile.avatar : ""}
         />
-      </div> */}
+      </Box> */}
 
       <SubmitButton text={btnText} />
     </form>

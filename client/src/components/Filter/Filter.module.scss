@@ -1,16 +1,19 @@
 @import "../../styles/variables.scss";
 
 .filter {
-  border: 1px solid $blue;
-  border-radius: 4px;
-  box-shadow: $shadow;
+  // border: 1px solid $blue;
+  // border-radius: 4px;
+  // box-shadow: $shadow;
+  // background: $background-Container;
+  margin-top: 1.2em;
+  margin-right: 1.2em;
+  margin-bottom: 1.2em;
+  border-right: 1px solid $blue;
   width: 20%;
-  height: 800px;
-  padding: 20px;
-  background: $background-Container;
-  margin-left: 1.2em;
+  height: 50em;
+  padding: 0 1.25em;
 
   h1 {
-    margin-bottom: 10px;
+    margin-bottom: 0.6em;
   }
 }
