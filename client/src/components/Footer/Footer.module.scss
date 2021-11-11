@@ -1,0 +1,9 @@
+@import "../../styles/variables.scss";
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $background-Container;
+  height: 8em;
+}
