@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Neder Hayden",
+    "age": "30",
+    "city": "manaus",
+    "state": {
+      "id": "4",
+      "name": "AM"
+    },
+    "occupation": {
+      "id": "1",
+      "name": "Front-End"
+    },
+    "category": {
+      "id": "1",
+      "name": "Júnior"
+    },
+    "gender": {
+      "id": "1",
+      "name": "Masculino"
+    }
+  }
+]

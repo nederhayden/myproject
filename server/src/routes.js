@@ -1,7 +1,61 @@
 const routes = require("express").Router();
 const multer = require("multer");
 const multerConfig = require("./config/multer");
+const fs = require("fs");
 
+const profiles = require("./db/profiles.json");
+const categories = require("./db/categories.json");
+const genders = require("./db/genders.json");
+const occupations = require("./db/occupations.json");
+const states = require("./db/states.json");
+const path = require("path");
+
+routes.get("/profiles", (req, res) => {
+  res.json(profiles);
+});
+
+routes.get("/categories", (req, res) => {
+  res.json(categories);
+});
+
+routes.get("/genders", (req, res) => {
+  res.json(genders);
+});
+
+routes.get("/occupations", (req, res) => {
+  res.json(occupations);
+});
+
+routes.get("/states", (req, res) => {
+  res.json(states);
+});
+
+/*=================== CRIA UM NOVO PERFIL ===================*/
+routes.post("/profiles", (req, res) => {
+  const { name, age, city, state, occupation, category, gender } = req.body;
+
+  const newProfile = {
+    name,
+    age,
+    city,
+    state,
+    occupation,
+    category,
+    gender,
+  };
+
+  profiles.push(newProfile);
+  let newData = JSON.stringify(profiles, null, 2);
+  fs.writeFile(path.join(__dirname, "./db/profiles.json"), newData, (error) => {
+    if (error) throw error;
+
+    console.log("perfil adicionado");
+  });
+
+  return res.status(201).json(newProfile);
+});
+
+/*=================== UPLOAD DA IMAGEM ===================*/
 routes.post("/posts", multer(multerConfig).single("file"), async (req, res) => {
   const { originalname: name, size, filename: key } = req.file;
   const post = {
