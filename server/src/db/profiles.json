@@ -1,8 +1,9 @@
 [
   {
+    "id": "78c284792fc26ea00bd8f390f5bbcfec",
     "name": "Neder Hayden",
     "age": "30",
-    "city": "manaus",
+    "city": "Manaus",
     "state": {
       "id": "4",
       "name": "AM"
@@ -14,6 +15,28 @@
     "category": {
       "id": "1",
       "name": "Júnior"
+    },
+    "gender": {
+      "id": "1",
+      "name": "Masculino"
+    }
+  },
+  {
+    "id": "904c71d023535bf5e8bd1f687fdf2c07",
+    "name": "Murillo",
+    "age": "25",
+    "city": "campinas",
+    "state": {
+      "id": "25",
+      "name": "SP"
+    },
+    "occupation": {
+      "id": "1",
+      "name": "Front-End"
+    },
+    "category": {
+      "id": "3",
+      "name": "Sênior"
     },
     "gender": {
       "id": "1",

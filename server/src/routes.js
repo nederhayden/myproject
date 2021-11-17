@@ -2,6 +2,7 @@ const routes = require("express").Router();
 const multer = require("multer");
 const multerConfig = require("./config/multer");
 const fs = require("fs");
+const crypto = require("crypto");
 
 const profiles = require("./db/profiles.json");
 const categories = require("./db/categories.json");
@@ -35,6 +36,7 @@ routes.post("/profiles", (req, res) => {
   const { name, age, city, state, occupation, category, gender } = req.body;
 
   const newProfile = {
+    id: crypto.randomBytes(16).toString("hex"),
     name,
     age,
     city,
