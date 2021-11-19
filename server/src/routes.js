@@ -4,12 +4,10 @@ const multerConfig = require("./config/multer");
 const fs = require("fs");
 const crypto = require("crypto");
 
-const profiles = require("./db/profiles.json");
 const categories = require("./db/categories.json");
 const genders = require("./db/genders.json");
 const occupations = require("./db/occupations.json");
 const states = require("./db/states.json");
-const path = require("path");
 
 routes.get("/profiles", (req, res) => {
   res.json(profiles);
