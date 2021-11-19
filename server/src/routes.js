@@ -51,11 +51,7 @@ routes.post("/profiles", (req, res) => {
 
   profiles.push(newProfile);
   let newData = JSON.stringify(profiles, null, 2);
-  fs.writeFile(path.join(__dirname, "./db/profiles.json"), newData, (error) => {
-    if (error) throw error;
-
-    console.log("perfil adicionado");
-  });
+  fs.writeFileSync("src/db/profiles.json", newData);
 
   return res.status(201).json(newProfile);
 });
