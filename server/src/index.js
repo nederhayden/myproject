@@ -12,5 +12,5 @@ app.use(cors());
 app.use(require("./routes"));
 
 app.listen(5000, () => {
-  console.log("servidor rodando");
+  console.log("||||||||| SERVIDOR ON-LINE |||||||||");
 });
