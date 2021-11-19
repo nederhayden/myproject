@@ -31,6 +31,9 @@ routes.get("/states", (req, res) => {
   res.json(states);
 });
 
+const jsonProfiles = fs.readFileSync("src/db/profiles.json", "utf8");
+let profiles = JSON.parse(jsonProfiles);
+
 /*=================== CRIA UM NOVO PERFIL ===================*/
 routes.post("/profiles", (req, res) => {
   const { name, age, city, state, occupation, category, gender } = req.body;
@@ -70,6 +73,15 @@ routes.post("/posts", multer(multerConfig).single("file"), async (req, res) => {
   } catch (error) {
     console.log(error);
   }
+});
+
+/*=================== DELETAR PERFIL ===================*/
+routes.delete("/profiles/:id", (req, res) => {
+  const { id } = req.params;
+  profiles = profiles.filter((profile) => profile.id != id);
+  const jsonProfile = JSON.stringify(profiles);
+  fs.writeFileSync("src/db/profiles.json", jsonProfile, "utf-8");
+  return res.send("perfil deletado");
 });
 
 module.exports = routes;
