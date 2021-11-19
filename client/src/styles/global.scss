@@ -7,12 +7,15 @@
   box-sizing: border-box;
 }
 
-body {
+body,
+html,
+#root {
   background: $background-App;
   // background-position: center;
   // background-image: url("../assets/undraw_react_y7wq.svg");
   color: $white;
   font-family: "Times New Roman", Times, serif;
+  height: 100%;
 }
 
 a,

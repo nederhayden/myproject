@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import { GlobalContext } from "../../contexts/GlobalContext";
 import api from "../../services/api";
 import { CardProfile } from "../../components/Card/CardProfile";
-import { Filter } from "../../components/Filter/Filter";
+// import { Filter } from "../../components/Filter/Filter";
 import OrderProfiles from "../../components/Filter/OrderProfiles";
 
 import styles from "./Home.module.scss";
@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
     <div className={styles.home}>
-      <Filter />
+      {/* <Filter /> */}
       <div className={styles.homeProfiles}>
         {/*=================== ORGANIZA OS PERFIS POR ALFABETO OU IDADE ===================*/}
         <OrderProfiles />

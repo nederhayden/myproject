@@ -4,7 +4,6 @@ import { Box } from "@material-ui/core";
 import SubmitButton from "../../components/Form/SubmitButton";
 import Input from "../../components/Form/Input";
 import Select from "../../components/Form/Select";
-// import Dropzone from "../../components/Form/Dropzone";
 
 import styles from "./RegisterForm.module.scss";
 import Upload from "../../components/Upload/Upload";
@@ -75,14 +74,6 @@ export default function RegisterForm({ handleSubmit, btnText, profileData }) {
   function handleChange(e) {
     setProfile({ ...profile, [e.target.name]: e.target.value });
   }
-
-  /*=================== PEGA A URL DA IMAGEM INSERIDA NO CAMPO DE IMAGEM ===================*/
-  /* function handleAvatar(image) {
-    setProfile({
-      ...profile,
-      image,
-    });
-  } */
 
   /*=================== PEGA A OPCAO ESCOLHIDA NO CAMPO DE NIVEL ===================*/
   function handleCategory(e) {
@@ -198,19 +189,6 @@ export default function RegisterForm({ handleSubmit, btnText, profileData }) {
 
       <Upload />
       <FileImage />
-
-      {/* <Dropzone handleAvatarDrop={handleAvatar} /> */}
-      {/* <Box>
-        <Input
-          type="url"
-          text="Imagem"
-          name="avatar"
-          placeholder="https://example.com"
-          pattern="https://.*"
-          handleOnChange={handleAvatar}
-          value={profile.avatar ? profile.avatar : ""}
-        />
-      </Box> */}
 
       <SubmitButton text={btnText} />
     </form>
