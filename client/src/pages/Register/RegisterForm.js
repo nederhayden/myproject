@@ -72,7 +72,11 @@ export default function RegisterForm({ handleSubmit, btnText, profileData }) {
 
   /*=================== PEGA O DADO DIGITADO NO CAMPO DE NOME ===================*/
   function handleChange(e) {
-    setProfile({ ...profile, [e.target.name]: e.target.value });
+    let value = e.target.value;
+    value = value.toLowerCase().replace(/(?:^|\s)\S/g, (v) => {
+      return v.toUpperCase();
+    });
+    setProfile({ ...profile, [e.target.name]: value });
   }
 
   /*=================== PEGA A OPCAO ESCOLHIDA NO CAMPO DE NIVEL ===================*/
