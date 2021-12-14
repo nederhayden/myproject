@@ -34,7 +34,8 @@ let profiles = JSON.parse(jsonProfiles);
 
 /*=================== CRIA UM NOVO PERFIL ===================*/
 routes.post("/profiles", (req, res) => {
-  const { name, age, city, state, occupation, category, gender } = req.body;
+  const { name, age, city, state, occupation, category, gender, image } =
+    req.body;
 
   const newProfile = {
     id: crypto.randomBytes(16).toString("hex"),
@@ -45,6 +46,7 @@ routes.post("/profiles", (req, res) => {
     occupation,
     category,
     gender,
+    image,
   };
 
   profiles.push(newProfile);

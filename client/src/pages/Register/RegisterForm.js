@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import api from "../../services/api";
+// import { useFiles } from "../../contexts/GlobalContext";
 import { Box } from "@material-ui/core";
 import SubmitButton from "../../components/Form/SubmitButton";
 import Input from "../../components/Form/Input";
@@ -15,6 +16,7 @@ export default function RegisterForm({ handleSubmit, btnText, profileData }) {
   const [genders, setGenders] = useState([]);
   const [states, setStates] = useState([]);
   const [occupations, setOccupations] = useState([]);
+  // const { uploadedFile: files } = useFiles();
 
   /*=================== BUSCA AS OPCOES DOS COMPONENTES SELECTS ===================*/
   useEffect(() => {
@@ -122,6 +124,14 @@ export default function RegisterForm({ handleSubmit, btnText, profileData }) {
       },
     });
   }
+
+  /*=================== PEGA A OPCAO ESCOLHIDA NO CAMPO DE CARGO ===================*/
+  /* function handleImage(e) {
+    setProfile({
+      ...profile,
+      image: "",
+    });
+  } */
 
   return (
     /*=================== FORMULARIO ===================*/

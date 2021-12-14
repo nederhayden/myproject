@@ -38,11 +38,7 @@ const FileImage = () => {
             )}
 
             {uploadedFile.url && (
-              <a
-                href="https://avatars.githubusercontent.com/u/33813497?s=96&v=4"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="/" target="_blank" rel="noopener noreferrer">
                 <MdLink style={{ marginRight: 8 }} size={24} color="#222" />
               </a>
             )}
