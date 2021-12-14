@@ -4,6 +4,7 @@ import api from "../../services/api";
 import { CardProfile } from "../../components/Card/CardProfile";
 // import { Filter } from "../../components/Filter/Filter";
 import OrderProfiles from "../../components/Filter/OrderProfiles";
+import Avatar from "../../assets/avatar.png";
 
 import styles from "./Home.module.scss";
 
@@ -47,7 +48,7 @@ export default function Home() {
               <CardProfile
                 id={profile.id}
                 key={profile.id}
-                image={profile.image}
+                image={profile.image ? profile.image : Avatar}
                 name={profile.name}
                 age={profile.age}
                 city={profile.city}
