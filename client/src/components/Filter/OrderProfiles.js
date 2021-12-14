@@ -6,7 +6,7 @@ import styles from "./OrderProfiles.module.scss";
 export default function OrderProfiles() {
   const { setSortType } = useContext(GlobalContext);
   return (
-    <Box className={styles.wrapper1}>
+    <Box>
       <Box className={styles.wrapper2}>
         <strong>Ordernar por</strong>
         <select onChange={(e) => setSortType(e.target.value)}>
