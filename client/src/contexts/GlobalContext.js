@@ -19,7 +19,7 @@ export default function GlobalContextProvider({ children }) {
   const [sortType, setSortType] = useState("name");
   const [uploadedFile, setUploadedFile] = useState([]);
 
-  useEffect(() => {
+  /* useEffect(() => {
     api.get("posts").then((response) => {
       const postFormatted = response.data.map((post) => {
         return {
@@ -35,7 +35,7 @@ export default function GlobalContextProvider({ children }) {
 
       setUploadedFile(postFormatted);
     });
-  }, []);
+  }, []); */
 
   useEffect(() => {
     return () => {
